@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Topmass.Service.Image.Controllers.FileUploadController",
+    "Method": "OnPostUpload",
+    "RelativePath": "FileUpload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Topmass.Service.Image.UploadFileAdd",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

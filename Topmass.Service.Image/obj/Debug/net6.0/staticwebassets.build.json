@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "UWqhA5s54ezv7Yz0hqWOUQjz5y/XJuXmkFVLJep6Qsk=",
+  "Source": "Topmass.Service.Image",
+  "BasePath": "_content/Topmass.Service.Image",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

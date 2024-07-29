@@ -1,0 +1,11 @@
+C:\vietbank\crm\topmass\Topmass.Core.Model\bin\Debug\net6.0\Topmass.Core.Model.deps.json
+C:\vietbank\crm\topmass\Topmass.Core.Model\bin\Debug\net6.0\Topmass.Core.Model.dll
+C:\vietbank\crm\topmass\Topmass.Core.Model\bin\Debug\net6.0\Topmass.Core.Model.pdb
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.AssemblyInfoInputs.cache
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.AssemblyInfo.cs
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.csproj.CoreCompileInputs.cache
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.dll
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\refint\Topmass.Core.Model.dll
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.pdb
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\ref\Topmass.Core.Model.dll

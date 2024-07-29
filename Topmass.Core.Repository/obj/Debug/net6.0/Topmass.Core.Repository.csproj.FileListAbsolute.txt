@@ -1,0 +1,15 @@
+C:\vietbank\crm\topmass\Topmass.Core.Repository\bin\Debug\net6.0\Topmass.Core.Repository.deps.json
+C:\vietbank\crm\topmass\Topmass.Core.Repository\bin\Debug\net6.0\Topmass.Core.Repository.dll
+C:\vietbank\crm\topmass\Topmass.Core.Repository\bin\Debug\net6.0\Topmass.Core.Repository.pdb
+C:\vietbank\crm\topmass\Topmass.Core.Repository\bin\Debug\net6.0\Topmass.Core.Model.dll
+C:\vietbank\crm\topmass\Topmass.Core.Repository\bin\Debug\net6.0\Topmass.Core.Model.pdb
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass.Core.Repository.csproj.AssemblyReference.cache
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass.Core.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass.Core.Repository.AssemblyInfoInputs.cache
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass.Core.Repository.AssemblyInfo.cs
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass.Core.Repository.csproj.CoreCompileInputs.cache
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass..2A0C5DD5.Up2Date
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass.Core.Repository.dll
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\refint\Topmass.Core.Repository.dll
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\Topmass.Core.Repository.pdb
+C:\vietbank\crm\topmass\Topmass.Core.Repository\obj\Debug\net6.0\ref\Topmass.Core.Repository.dll
