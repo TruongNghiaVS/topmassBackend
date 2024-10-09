@@ -1,25 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using topmass.Model;
-using Topmass.core.Business;
 
 namespace topmass.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     public class BaseController : ControllerBase
     {
 
         private readonly ILogger<BaseController> _logger;
-        private readonly IUserBuisiness _business;
-        public BaseController(ILogger<BaseController> logger,
-            IUserBuisiness userBuisiness)
+
+        public BaseController(ILogger<BaseController> logger)
         {
             _logger = logger;
 
-            _business = userBuisiness;
-        }
 
+        }
         protected async Task<AuthenInfo> GetCurrentUser()
         {
             var identity = User.Identity as ClaimsIdentity;
@@ -28,13 +25,13 @@ namespace topmass.Controllers
                 var userClaims = identity.Claims;
                 var idUser = identity.Claims.FirstOrDefault(o => o.Type == "userId")?.Value;
                 var userName = userClaims.FirstOrDefault(o => o.Type == "userName")?.Value;
-                var roleId = userClaims.FirstOrDefault(o => o.Type == "RoleUser")?.Value;
-                var fullName = userClaims.FirstOrDefault(o => o.Type == "Name")?.Value;
-                var lineCode = userClaims.FirstOrDefault(o => o.Type == "lineCode")?.Value;
-                var vendorCode = userClaims.FirstOrDefault(o => o.Type == "vendorCode")?.Value;
+                var firstName = userClaims.FirstOrDefault(o => o.Type == "firstName")?.Value;
+                var lastName = userClaims.FirstOrDefault(o => o.Type == "fullName")?.Value;
+                var fullName = firstName + " " + lastName;
                 return new AuthenInfo
                 {
                     UserName = userName,
+                    FullName = fullName,
                     Id = idUser
                 };
             }

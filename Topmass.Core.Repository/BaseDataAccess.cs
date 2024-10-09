@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using Topmass.Core.Model;
+using Topmass.Core.Repository.Log;
 
 namespace Topmass.Core.Repository
 {
@@ -14,17 +15,43 @@ namespace Topmass.Core.Repository
         protected int offset;
         protected string tableName = "";
         protected string sqlGetALl = "";
+
+
+        private LogWriter _log;
         public BaseDataAccess(IConfiguration configuration)
         {
             _configuration = configuration;
-            _connection = new SqlConnection(configuration.GetConnectionString("stringConnect"));
+
+            _log = new LogWriter("tạo thành công");
+            try
+            {
+                _connection = new SqlConnection(configuration.GetConnectionString("stringConnect"));
+                _log.LogWrite("kết nối thành công");
+            }
+            catch (Exception e)
+            {
+
+                _log.LogWrite("error: " + e.Message);
+            }
         }
         protected IDbConnection GetConnection()
         {
-            var con = new SqlConnection(_configuration.GetConnectionString("stringConnect"));
-            con.Open();
-            return con;
+            try
+            {
+                var con = new SqlConnection(_configuration.GetConnectionString("stringConnect"));
+                con.Open();
+                return con;
+            }
+            catch (Exception e)
+            {
+
+                _log.LogWrite("error: " + e.Message);
+                return null;
+            }
+
+
         }
+
 
 
         protected DynamicParameters GetParams<T>(T model,
@@ -68,16 +95,17 @@ namespace Topmass.Core.Repository
             object parameter = null,
             CommandType commandType = CommandType.StoredProcedure)
         {
+
+
             if (string.IsNullOrEmpty(sql) || parameter == null)
             {
                 return false;
             }
-
-
             try
             {
                 using (var _con = GetConnection())
                 {
+
                     var result = await _con.ExecuteAsync(sql, param: parameter, commandType: commandType);
 
                     return true;
@@ -85,6 +113,7 @@ namespace Topmass.Core.Repository
             }
             catch (Exception e)
             {
+                _log.LogWrite(e.Message);
                 return false;
 
             }
@@ -113,45 +142,97 @@ namespace Topmass.Core.Repository
 
         }
 
-        public async Task<bool> UpdateBasic<T>(T itemModel) where T : class, new()
+
+
+
+        public async Task<T> FindOneByStatementSql<T>(string sqlText,
+            object param) where T : class, new()
         {
-            var properties = typeof(T).GetProperties();
-            var parameters = new DynamicParameters();
-            StringBuilder query = new StringBuilder();
-            query.Append($"UPDATE {tableName} SET ");
-            foreach (var item in properties)
-            {
-                var tempCol = item.Name;
-                var tempVal = item.GetValue(itemModel);
-                parameters.Add(tempCol, tempVal);
-                if (tempCol.ToLower() == "id")
-                {
-                    continue;
-                }
-                query.Append($"{tempCol} = @{tempCol},");
-            }
-            query.Remove(query.Length - 1, 1);
-            query.Append($" WHERE id = @Id ");
+
+
 
             try
             {
                 using (var _con = GetConnection())
                 {
                     var result =
-                        await _con.ExecuteAsync(query.ToString(),
-                        parameters, commandType: CommandType.Text);
-                    return true;
+                        await _con.QueryAsync<T>(sqlText, param,
+                        commandType: CommandType.Text);
+                    if (result == null)
+                    {
+                        return new T();
+                    }
+                    return result.FirstOrDefault();
                 }
             }
             catch (Exception)
             {
-                return false;
+                return new T();
+
+            }
+        }
+
+        public async Task<List<T>> GetAllByStatementSql<T>(string sqlText,
+            object param) where T : class, new()
+        {
+            try
+            {
+                using (var _con = GetConnection())
+                {
+                    var result =
+                        await _con.QueryAsync<T>(sqlText, param,
+                        commandType: CommandType.Text);
+                    if (result == null)
+                    {
+                        return new List<T>();
+                    }
+                    return result.ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                return new List<T>();
+
+            }
+        }
+
+        public async Task<IEnumerable<TIndexModel>> ExecutePro<TIndexModel>(string sql = "",
+            object parameter = null,
+            CommandType commandType = CommandType.StoredProcedure)
+
+
+        {
+            if (string.IsNullOrEmpty(sql))
+            {
+                return new List<TIndexModel>();
+            }
+            if (parameter == null)
+            {
+                parameter = new DynamicParameters();
+            }
+
+            try
+            {
+                using (var _con = GetConnection())
+                {
+                    var result = await _con.QueryAsync<TIndexModel>(sql, param: parameter, commandType: commandType);
+
+                    if (result.Any())
+                    {
+                        return result.ToList();
+                    }
+                    return new List<TIndexModel>();
+                }
+            }
+            catch (Exception e)
+            {
+                return new List<TIndexModel>();
 
             }
         }
 
 
-        public async Task<IEnumerable<TIndexModel>> ExecuteSQL<TIndexModel>(string sql = "",
+        public async Task<List<TIndexModel>> ExecuteSqlProcerduceToList<TIndexModel>(string sql = "",
             object parameter = null,
             CommandType commandType = CommandType.StoredProcedure)
 
@@ -216,7 +297,35 @@ namespace Topmass.Core.Repository
             }
 
         }
+        public async Task<T> GetByMail<T>(string email) where T : BaseModel, new()
+        {
+            var _baseTable = tableName;
+            var sql = "SELECT * FROM " + "[" + _baseTable + "]" + " WHERE email = @email";
+            T result;
+            try
+            {
+                using (var _con = GetConnection())
+                {
+                    result = await _con.QueryFirstOrDefaultAsync<T>(sql, param: new
+                    {
+                        email
+                    });
 
+                    if (result == null)
+                    {
+                        result = new T() { Id = -1 };
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+                result = new T() { Id = -1 };
+            }
+            return result;
+
+        }
         public async Task<T> GetByIdBase<T>(int id) where T : BaseModel, new()
         {
             var _baseTable = tableName;
@@ -248,7 +357,7 @@ namespace Topmass.Core.Repository
         }
 
 
-        public async Task<T> ExecuteSQL2<T>(string sql = "",
+        public async Task<T> ExecuteSqlProcedure<T>(string sql = "",
           object parameter = null)
           where T : class, new()
 
@@ -289,10 +398,12 @@ namespace Topmass.Core.Repository
             }
 
         }
+
         public async Task<bool> ExecuteSQL(string sql = "",
          object parameter = null)
 
         {
+
             if (string.IsNullOrEmpty(sql))
             {
                 return false;
@@ -317,7 +428,7 @@ namespace Topmass.Core.Repository
             }
             catch (Exception e)
             {
-
+                _log.LogWrite(e.Message);
                 return false;
             }
 
@@ -347,6 +458,45 @@ namespace Topmass.Core.Repository
                 del = delete
             });
         }
+
+        public async Task<bool> UpdateBasic<T>(T itemModel) where T : class, new()
+        {
+            var properties = typeof(T).GetProperties();
+            var parameters = new DynamicParameters();
+            StringBuilder query = new StringBuilder();
+            query.Append($"UPDATE {tableName} SET ");
+            foreach (var item in properties)
+            {
+                var tempCol = item.Name;
+                var tempVal = item.GetValue(itemModel);
+                parameters.Add(tempCol, tempVal);
+                if (tempCol.ToLower() == "id")
+                {
+                    continue;
+                }
+                query.Append($"{tempCol} = @{tempCol},");
+            }
+            query.Remove(query.Length - 1, 1);
+            query.Append($" WHERE id = @Id ");
+
+            try
+            {
+                using (var _con = GetConnection())
+                {
+                    var result =
+                        await _con.ExecuteAsync(query.ToString(),
+                        parameters, commandType: CommandType.Text);
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+
+            }
+        }
+
+
         public async Task<BaseList> GetBaseAll<TIndexModel>(
              dynamic parameter,
              string sqlPro = ""

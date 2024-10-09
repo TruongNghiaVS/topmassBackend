@@ -5,6 +5,7 @@ C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.G
 C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.AssemblyInfoInputs.cache
 C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.AssemblyInfo.cs
 C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.csproj.CoreCompileInputs.cache
+C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.sourcelink.json
 C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.dll
 C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\refint\Topmass.Core.Model.dll
 C:\vietbank\crm\topmass\Topmass.Core.Model\obj\Debug\net6.0\Topmass.Core.Model.pdb

@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Topmass.Bussiness.Mail\Topmass.Bussiness.Mail.csproj" />
     <ProjectReference Include="..\Topmass.Core.Model\Topmass.Core.Model.csproj" />
     <ProjectReference Include="..\Topmass.Core.Repository\Topmass.Core.Repository.csproj" />
   </ItemGroup>

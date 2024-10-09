@@ -11,6 +11,34 @@ namespace Topmass.Core.Repository
             Data = Enumerable.Empty<Object>();
         }
     }
+    public class RegionalReponse : BaseList
+    {
+        public int Total { get; set; }
+        public IEnumerable? Data { get; set; }
+        public string Type { get; set; }
+        public RegionalReponse()
+        {
+
+        }
+    }
+
+    public class RegionalRequest
+    {
+        public int? Type { get; set; }
+
+        public string? Level1 { get; set; }
+        public string? Level2 { get; set; }
+
+        public string? Slug { get; set; }
+        public RegionalRequest()
+        {
+            Type = 1;
+            //1: tinh
+            //2: Xa
+            //3: phuong
+        }
+    }
+
 
     public class BaseRequest
     {

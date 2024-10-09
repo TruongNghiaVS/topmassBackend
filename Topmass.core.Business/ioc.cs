@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Topmass.Bussiness.Mail;
 using Topmass.Core.Repository;
 
 namespace Topmass.core.Business
@@ -7,9 +8,12 @@ namespace Topmass.core.Business
     {
         public static void ConfigBusiness(this IServiceCollection services)
         {
-            // singleton
             services.ConfigRep();
-            services.AddSingleton<IUserBuisiness, UserBusiness>();
+            services.AddSingleton<ICandidateBusiness, CandidateBusiness>();
+            services.AddSingleton<IAuthenBuisiness, AuthenBuisiness>();
+
+            services.AddSingleton<IProfileBusiness, ProfileBusiness>();
+            services.ConfigMailBusiness();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Topmass.Core.Model;
+using Topmass.Core.Repository.Model;
 
 namespace Topmass.Core.Repository
 {
@@ -9,6 +10,12 @@ namespace Topmass.Core.Repository
         {
             tableName = "UserModel";
         }
+
+        public async Task<bool> AddUser(UserAdd request)
+        {
+            return await this.ExceueProdure("pro_addUser", request);
+        }
+
 
     }
 }

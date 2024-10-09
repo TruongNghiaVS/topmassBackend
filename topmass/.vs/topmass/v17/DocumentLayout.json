@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\vietbank\\crm\\topmass\\topmass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAC8AED0-F4C2-4AE1-A5B8-67D252F01D11}|..\\Topmass.Core.Model\\Topmass.Core.Model.csproj|c:\\vietbank\\crm\\topmass\\topmass.core.model\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04A531C3-916E-4CC8-B8B6-5A2699530425}|..\\Topmass.CV.Business\\Topmass.CV.Business.csproj|c:\\vietbank\\crm\\topmass\\topmass.cv.business\\profilecvbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A531C3-916E-4CC8-B8B6-5A2699530425}|..\\Topmass.CV.Business\\Topmass.CV.Business.csproj|c:\\vietbank\\crm\\topmass\\topmass.cv.business\\iprofilecvbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861D33D2-6A0C-43C1-B0ED-1C8DBD7BFE0D}|..\\recruiter\\Topmass.Recruiter\\Topmass.Recruiter.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter\\controllers\\searchcvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAC8AED0-F4C2-4AE1-A5B8-67D252F01D11}|..\\Topmass.Core.Model\\Topmass.Core.Model.csproj|c:\\vietbank\\crm\\topmass\\topmass.core.model\\cv\\searchcvmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAC8AED0-F4C2-4AE1-A5B8-67D252F01D11}|..\\Topmass.Core.Model\\Topmass.Core.Model.csproj|c:\\vietbank\\crm\\topmass\\topmass.core.model\\cv\\resume.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,20 +25,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseModel.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\BaseModel.cs",
-              "RelativeDocumentMoniker": "..\\Topmass.Core.Model\\BaseModel.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\BaseModel.cs",
-              "RelativeToolTip": "..\\Topmass.Core.Model\\BaseModel.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAA3wAwAAAAqAAAA",
+              "DocumentIndex": 2,
+              "Title": "SearchCVController.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
+              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
+              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAcwDoAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T06:21:05.208Z",
+              "WhenOpened": "2024-10-08T09:01:22.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchCVModel.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\CV\\SearchCVModel.cs",
+              "RelativeDocumentMoniker": "..\\Topmass.Core.Model\\CV\\SearchCVModel.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\CV\\SearchCVModel.cs",
+              "RelativeToolTip": "..\\Topmass.Core.Model\\CV\\SearchCVModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T08:51:53.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Resume.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\CV\\Resume.cs",
+              "RelativeDocumentMoniker": "..\\Topmass.Core.Model\\CV\\Resume.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\CV\\Resume.cs",
+              "RelativeToolTip": "..\\Topmass.Core.Model\\CV\\Resume.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T08:51:48.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfileCVBusiness.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.CV.Business\\ProfileCVBusiness.cs",
+              "RelativeDocumentMoniker": "..\\Topmass.CV.Business\\ProfileCVBusiness.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.CV.Business\\ProfileCVBusiness.cs",
+              "RelativeToolTip": "..\\Topmass.CV.Business\\ProfileCVBusiness.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAIwJ0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T08:43:49.622Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProfileCVBusiness.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.CV.Business\\IProfileCVBusiness.cs",
+              "RelativeDocumentMoniker": "..\\Topmass.CV.Business\\IProfileCVBusiness.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.CV.Business\\IProfileCVBusiness.cs",
+              "RelativeToolTip": "..\\Topmass.CV.Business\\IProfileCVBusiness.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T08:43:25.893Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

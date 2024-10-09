@@ -14,7 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Topmass.Business.History\Topmass.Business.History.csproj" />
+    <ProjectReference Include="..\Topmass.Business.Regional\Topmass.Business.Regional.csproj" />
+    <ProjectReference Include="..\Topmass.Bussiness.Company\Topmass.Bussiness.Company.csproj" />
     <ProjectReference Include="..\Topmass.core.Business\Topmass.core.Business.csproj" />
+    <ProjectReference Include="..\Topmass.CV.Business\Topmass.CV.Business.csproj" />
+    <ProjectReference Include="..\Topmass.Job.Business\Topmass.Job.Business.csproj" />
+    <ProjectReference Include="..\TopMass.Web.Business\TopMass.Web.Business.csproj" />
   </ItemGroup>
 
 </Project>
