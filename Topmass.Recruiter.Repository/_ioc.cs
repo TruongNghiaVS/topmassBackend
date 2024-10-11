@@ -17,6 +17,8 @@ namespace Topmass.Recruiter.Repository
             services.AddSingleton<IBusinessLicenseRepository, BusinessLicenseRepository>();
             services.AddSingleton<IBusinessLicenseLogRepository, BusinessLicenseLogRepository>();
 
+            services.AddSingleton<IRewardTransactionRepository, RewardTransactionRepository>();
+
 
 
         }

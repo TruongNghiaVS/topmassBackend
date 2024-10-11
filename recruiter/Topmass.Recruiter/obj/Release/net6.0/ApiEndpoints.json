@@ -213,12 +213,27 @@
       },
       {
         "Name": "CampagnId",
-        "Type": "System.Int32",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
         "Name": "TypeData",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Recruitment",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Key",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -326,6 +341,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Topmass.Recruiter.Controllers.HistoryController",
+    "Method": "GetHistoryLogin",
+    "RelativePath": "api/recruiter/History/GetHistoryLogin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.HistoryController",
+    "Method": "GetLogUpdateAccount",
+    "RelativePath": "api/recruiter/History/GetLogUpdateAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Topmass.Recruiter.Controllers.JobController",
     "Method": "Add",
     "RelativePath": "api/recruiter/Job/Add",
@@ -421,6 +456,32 @@
   },
   {
     "ContainingType": "Topmass.Recruiter.Controllers.JobController",
+    "Method": "GetDataChartCountViewByJob",
+    "RelativePath": "api/recruiter/Job/GetDataChartCountViewByJob",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "JobId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "From",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "To",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.JobController",
     "Method": "GetInfo",
     "RelativePath": "api/recruiter/Job/GetInfo",
     "HttpMethod": "GET",
@@ -437,15 +498,57 @@
   },
   {
     "ContainingType": "Topmass.Recruiter.Controllers.JobController",
-    "Method": "Update",
-    "RelativePath": "api/recruiter/Job/Update",
+    "Method": "GetInfoForEdit",
+    "RelativePath": "api/recruiter/Job/GetInfoForEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "JobId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.JobController",
+    "Method": "GetOverViewInfoMation",
+    "RelativePath": "api/recruiter/Job/GetOverViewInfoMation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "JobId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "From",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "To",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.JobController",
+    "Method": "UpdateJob",
+    "RelativePath": "api/recruiter/Job/UpdateJob",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Topmass.Recruiter.Model.JobItemRequestUpdate",
+        "Type": "Topmass.Recruiter.Model.JobItemRequestUpdateInfo",
         "IsRequired": true
       }
     ],
@@ -554,6 +657,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Topmass.Recruiter.Controllers.NotificationController",
+    "Method": "GetDetail",
+    "RelativePath": "api/recruiter/Notification/GetDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.NotificationController",
+    "Method": "UpdateNotificaton",
+    "RelativePath": "api/recruiter/Notification/UpdateNotificaton",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Topmass.Recruiter.Model.InputChangeStatusUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Topmass.Recruiter.Controllers.ProfileController",
     "Method": "AddBusinesslicense",
     "RelativePath": "api/recruiter/Profile/AddBusinesslicense",
@@ -634,6 +769,147 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
+    "Method": "GetDetailInfo",
+    "RelativePath": "api/recruiter/SearchCV/GetDetailInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
+    "Method": "GetProfileGenerate",
+    "RelativePath": "api/recruiter/SearchCV/GetProfileGenerate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
+    "Method": "OpenCV",
+    "RelativePath": "api/recruiter/SearchCV/OpenCV",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
+    "Method": "SaveSearchCV",
+    "RelativePath": "api/recruiter/SearchCV/SaveSearchCV",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "campaignId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
+    "Method": "Search",
+    "RelativePath": "api/recruiter/SearchCV/Search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "KeyWord",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LocationCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CvKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DayOfBirth",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EducationalLevelArray",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SchoolSearch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Limit",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.SupportController",
+    "Method": "CreateRequestContact",
+    "RelativePath": "api/recruiter/Support/CreateRequestContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Topmass.Recruiter.Model.InputTicketItemAdd",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Topmass.Recruiter.Controllers.SupportController",
     "Method": "CreateTicket",
     "RelativePath": "api/recruiter/Support/CreateTicket",
@@ -651,90 +927,32 @@
   },
   {
     "ContainingType": "Topmass.Recruiter.Controllers.WebController",
-    "Method": "AddArticle",
-    "RelativePath": "api/recruiter/Web/AddArticle",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "reqest",
-        "Type": "TopMass.Web.Business.Model.ArticleRequestAdd",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Topmass.Recruiter.Controllers.WebController",
-    "Method": "AddCategory",
-    "RelativePath": "api/recruiter/Web/AddCategory",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "reqest",
-        "Type": "TopMass.Web.Business.Model.CategoryRequestAdd",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Topmass.Recruiter.Controllers.WebController",
-    "Method": "DeleteArticle",
-    "RelativePath": "api/recruiter/Web/DeleteArticle",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "reqest",
-        "Type": "TopMass.Web.Business.Model.DeleteRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Topmass.Recruiter.Controllers.WebController",
-    "Method": "GetAllArticle",
-    "RelativePath": "api/recruiter/Web/GetAllArticle",
+    "Method": "GetContentPage",
+    "RelativePath": "api/recruiter/Web/GetContentPage",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "reqest",
-        "Type": "TopMass.Web.Business.Model.ArticleReqest",
-        "IsRequired": true
+        "Name": "pageSlug",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Topmass.Recruiter.Controllers.WebController",
-    "Method": "GetAllCategory",
-    "RelativePath": "api/recruiter/Web/GetAllCategory",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Topmass.Recruiter.Controllers.WebController",
-    "Method": "GetArticle",
-    "RelativePath": "api/recruiter/Web/GetArticle",
+    "Method": "GetInfomationSEO",
+    "RelativePath": "api/recruiter/Web/GetInfomationSEO",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "reqest",
-        "Type": "TopMass.Web.Business.Model.ArticleReqest",
-        "IsRequired": true
+        "Name": "pageSlug",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

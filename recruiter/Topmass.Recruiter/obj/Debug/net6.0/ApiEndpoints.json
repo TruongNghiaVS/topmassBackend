@@ -802,6 +802,43 @@
   },
   {
     "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
+    "Method": "OpenCV",
+    "RelativePath": "api/recruiter/SearchCV/OpenCV",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
+    "Method": "SaveSearchCV",
+    "RelativePath": "api/recruiter/SearchCV/SaveSearchCV",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "campaignId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
     "Method": "Search",
     "RelativePath": "api/recruiter/SearchCV/Search",
     "HttpMethod": "GET",

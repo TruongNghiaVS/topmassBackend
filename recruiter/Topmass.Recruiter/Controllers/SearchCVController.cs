@@ -11,7 +11,6 @@ namespace Topmass.Recruiter.Controllers
     [Authorize]
     public class SearchCVController : BaseController
     {
-
         private readonly ILogger<SearchCVController> _logger;
         private readonly ICVBusiness _cVBusiness;
         private readonly ICVUtilities _cVUtilities;
@@ -23,7 +22,6 @@ namespace Topmass.Recruiter.Controllers
             IProfileCVBusiness profileCVBusiness
             ) : base(logger)
         {
-
             _logger = logger;
             _cVBusiness = cVBusiness;
             _cVUtilities = cVUtilities;
@@ -51,7 +49,6 @@ namespace Topmass.Recruiter.Controllers
             reponse.Data = result;
             return StatusCode(reponse.StatusCode, reponse);
         }
-
         [HttpGet]
         public async Task<ActionResult> GetProfileGenerate(string? searchId)
         {
@@ -59,17 +56,33 @@ namespace Topmass.Recruiter.Controllers
             var result = await _profileCVBusiness.GetFullProfileUser(searchId);
             return StatusCode(result.StatusCode, result);
         }
-
         [HttpGet]
         public async Task<ActionResult> GetDetailInfo(string searchId)
         {
             var resultUser = await GetCurrentUser();
             var reponse = new BaseResult();
-            var result = await _profileCVBusiness.GetDetailInfo(searchId);
+            var result = await _profileCVBusiness.GetDetailInfo(searchId, resultUser.UserId);
             reponse.Data = result;
             return StatusCode(reponse.StatusCode, reponse);
         }
 
+        [HttpPost]
+        public async Task<ActionResult> SaveSearchCV(int searchId, int campaignId)
+        {
+            var resultUser = await GetCurrentUser();
+            var reponse = new BaseResult();
+            return StatusCode(reponse.StatusCode, reponse);
+        }
+        [HttpPost]
+        public async Task<ActionResult> OpenCV(int searchId)
+        {
+            var resultUser = await GetCurrentUser();
+
+
+            var reponse = new BaseResult();
+
+            return StatusCode(reponse.StatusCode, reponse);
+        }
 
     }
 }

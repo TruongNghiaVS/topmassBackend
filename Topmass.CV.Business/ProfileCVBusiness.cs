@@ -125,22 +125,18 @@ namespace Topmass.CV.Business
             return reponse;
 
         }
-
         public async Task<dynamic> GetProfileUserCV(int userId)
         {
             var profileUser = await _repository.FindOneByStatementSql<ProfileCVUser>("select * from ProfileCV where RelId = @userId",
-
-                    new
-                    {
-                        userId = userId
-                    }
+            new
+            {
+                userId = userId
+            }
             );
             if (profileUser != null)
             {
-
                 return profileUser;
             }
-
             profileUser = new ProfileCVUser();
             return profileUser;
         }
@@ -207,10 +203,8 @@ namespace Topmass.CV.Business
             };
             await _searchCVExtraRepository.AddOrUPdate(searchCVExtraModelInsert);
             var dataSearchCV = await _searchCVRepository.GetById(int.Parse(searchId));
-
-
-
-
+            dataSearchCV.CountView++;
+            await _searchCVRepository.AddOrUPdate(dataSearchCV);
             var dataTemplate = data;
             return dataTemplate;
         }

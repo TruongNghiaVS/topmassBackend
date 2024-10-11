@@ -102,7 +102,17 @@ namespace Topmass.CV.Business
         public async Task<SearchCVReponse> SearchCV(SearchCVRequestInfo request)
         {
             var result = new SearchCVReponse();
-            var dataSearch = await _jobRepository.GetAllByStatementSql<ItemSearchCVDisplay>("sp_cv_search", request);
+            var dataSearch = await _jobRepository
+                .ExecuteSqlProcerduceToList<ItemSearchCVDisplay>("sp_cv_search",
+                new
+                {
+                    request.KeyWord,
+                    request.LocationCode,
+                    request.SchoolSearch,
+                    request.Gender,
+                    request.CvKey
+                }
+                );
             result.Data = dataSearch;
             return result;
 

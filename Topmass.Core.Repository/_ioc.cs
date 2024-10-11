@@ -38,6 +38,10 @@
             services.AddSingleton<IPageContentRepository, PageContentRepository>();
             services.AddSingleton<ISearchCVExtraRepository, SearchCVExtraRepository>();
             services.AddSingleton<ISearchCVRepository, SearchCVRepository>();
+
+            services.AddSingleton<ISearchCVResultRepository, SearchCVResultRepository>();
+
+
         }
     }
 }
