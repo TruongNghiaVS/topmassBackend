@@ -605,7 +605,7 @@ namespace Topmass.Job.Business
 
             if (!string.IsNullOrEmpty(ItemjobInfo.Skill))
             {
-                skills = JsonSerializer.Deserialize<List<SkillProper>>(ItemjobInfo.Emails);
+                skills = JsonSerializer.Deserialize<List<SkillProper>>(ItemjobInfo.Skill);
             }
             var dataReponse = new GetInfoForEditReponse()
             {

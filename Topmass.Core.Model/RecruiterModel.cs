@@ -13,6 +13,10 @@
         public string? Password { get; set; }
         public int? NumberLightning { get; set; }
 
+        public RecruiterModel()
+        {
+            NumberLightning = 0;
+        }
 
 
     }
@@ -34,7 +38,7 @@
 
         public RecruiterInfoModel()
         {
-            NumberLightning = 0;
+
         }
 
 

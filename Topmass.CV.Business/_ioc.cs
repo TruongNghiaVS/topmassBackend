@@ -11,9 +11,8 @@ namespace Topmass.CV.Business
             services.AddSingleton<ICVBusiness, CVBusiness>();
             services.AddSingleton<ICVUserBusiness, CVUserBusiness>();
             services.AddSingleton<IProfileCVBusiness, ProfileCVBusiness>();
-
+            services.AddSingleton<ISearchCVBusiness, SearchCVBusiness>();
             services.ConfigRepCV();
-
 
         }
 

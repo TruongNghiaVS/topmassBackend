@@ -53,6 +53,8 @@
 
             }
         }
+
+        public int Point { get; set; }
         public SearchCVItemDisplay()
         {
             FullName = string.Empty;
@@ -65,6 +67,7 @@
             SalaryTo = 0;
             SalaryExpertText = "Thoả thuận";
             LastAccess = DateTime.Now.AddDays(-2);
+            Point = 2;
         }
     }
 }

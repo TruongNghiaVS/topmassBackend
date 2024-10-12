@@ -12,6 +12,7 @@ namespace Topmass.Recruiter.Bussiness
             services.AddSingleton<IAuthenBuisiness, AuthenBuisiness>();
             services.AddSingleton<IRecruiterBusiness, RecruiterBusiness>();
             services.AddSingleton<ISupportBusiness, SupportBusiness>();
+            services.AddSingleton<IRewardBusiness, RewardBusiness>();
 
         }
     }

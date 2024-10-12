@@ -769,6 +769,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Topmass.Recruiter.Controllers.RewardController",
+    "Method": "OpenCV",
+    "RelativePath": "api/recruiter/Reward/OpenCV",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Topmass.Recruiter.Model.OpenSearchCVRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
     "Method": "GetDetailInfo",
     "RelativePath": "api/recruiter/SearchCV/GetDetailInfo",

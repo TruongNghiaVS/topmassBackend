@@ -3,25 +3,10 @@
   "WorkspaceRootPath": "C:\\vietbank\\crm\\topmass\\topmass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3193EB8E-B370-4917-9D99-382104E419C4}|..\\recruiter\\Topmass.Recruiter.Bussiness\\Topmass.Recruiter.Bussiness.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter.bussiness\\rewardbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAC8AED0-F4C2-4AE1-A5B8-67D252F01D11}|..\\Topmass.Core.Model\\Topmass.Core.Model.csproj|c:\\vietbank\\crm\\topmass\\topmass.core.model\\recruitermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3193EB8E-B370-4917-9D99-382104E419C4}|..\\recruiter\\Topmass.Recruiter.Bussiness\\Topmass.Recruiter.Bussiness.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter.bussiness\\irewardbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3193EB8E-B370-4917-9D99-382104E419C4}|..\\recruiter\\Topmass.Recruiter.Bussiness\\Topmass.Recruiter.Bussiness.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter.bussiness\\recruiterbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{861D33D2-6A0C-43C1-B0ED-1C8DBD7BFE0D}|..\\recruiter\\Topmass.Recruiter\\Topmass.Recruiter.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{861D33D2-6A0C-43C1-B0ED-1C8DBD7BFE0D}|..\\recruiter\\Topmass.Recruiter\\Topmass.Recruiter.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter\\controllers\\profilecvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{861D33D2-6A0C-43C1-B0ED-1C8DBD7BFE0D}|..\\recruiter\\Topmass.Recruiter\\Topmass.Recruiter.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter\\controllers\\searchcvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861D33D2-6A0C-43C1-B0ED-1C8DBD7BFE0D}|..\\recruiter\\Topmass.Recruiter\\Topmass.Recruiter.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter\\controllers\\rewardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,97 +16,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RecruiterModel.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\RecruiterModel.cs",
-              "RelativeDocumentMoniker": "..\\Topmass.Core.Model\\RecruiterModel.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Core.Model\\RecruiterModel.cs",
-              "RelativeToolTip": "..\\Topmass.Core.Model\\RecruiterModel.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAA1wA0AAAAjAAAA",
+              "Title": "RewardController.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
+              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
+              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCoAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T08:33:48.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IRewardBusiness.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter.Bussiness\\IRewardBusiness.cs",
-              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter.Bussiness\\IRewardBusiness.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter.Bussiness\\IRewardBusiness.cs",
-              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter.Bussiness\\IRewardBusiness.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T08:26:31.179Z",
+              "WhenOpened": "2024-10-12T04:48:57.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RewardBusiness.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter.Bussiness\\RewardBusiness.cs",
-              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter.Bussiness\\RewardBusiness.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter.Bussiness\\RewardBusiness.cs",
-              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter.Bussiness\\RewardBusiness.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAA0AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T08:26:14.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RecruiterBusiness.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter.Bussiness\\RecruiterBusiness.cs",
-              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter.Bussiness\\RecruiterBusiness.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter.Bussiness\\RecruiterBusiness.cs",
-              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter.Bussiness\\RecruiterBusiness.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T08:26:03.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterController.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\RegisterController.cs",
-              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter\\Controllers\\RegisterController.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\RegisterController.cs",
-              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter\\Controllers\\RegisterController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T08:25:57.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProfileCVController.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\ProfileCVController.cs",
-              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter\\Controllers\\ProfileCVController.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\ProfileCVController.cs",
-              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter\\Controllers\\ProfileCVController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T08:25:53.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "SearchCVController.cs",
               "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
               "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
               "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
               "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBAAAAArAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABEAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T04:25:00.465Z",
+              "WhenOpened": "2024-10-12T04:12:55.737Z",
               "EditorCaption": ""
             }
           ]
