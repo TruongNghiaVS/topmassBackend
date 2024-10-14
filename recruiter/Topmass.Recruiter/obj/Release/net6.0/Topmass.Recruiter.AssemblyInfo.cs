@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Topmass.Recruiter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4741142076a4affc341e7c7c2698763f3f092d3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e3cb9aed9bd0c56e1a6aca88b4d2a697c4d1c38")]
 [assembly: System.Reflection.AssemblyProductAttribute("Topmass.Recruiter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Topmass.Recruiter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

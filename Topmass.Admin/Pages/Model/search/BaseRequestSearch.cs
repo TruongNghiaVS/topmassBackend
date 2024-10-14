@@ -8,5 +8,12 @@
         public int Status { get; set; }
         public DateTime? From { get; set; }
         public DateTime? To { get; set; }
+        public string Token { get; set; }
     }
+
+    public class NTDRequest : BaseInputRequestSearch
+    {
+
+    }
+
 }

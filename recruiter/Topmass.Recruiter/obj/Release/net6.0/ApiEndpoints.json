@@ -212,7 +212,7 @@
         "IsRequired": false
       },
       {
-        "Name": "CampagnId",
+        "Name": "Campaign",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
@@ -234,6 +234,11 @@
       {
         "Name": "Key",
         "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Source",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -271,6 +276,22 @@
       {
         "Name": "TypeData",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.CVController",
+    "Method": "GetAllSearchCVOfJob",
+    "RelativePath": "api/recruiter/CV/GetAllSearchCVOfJob",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "JobId",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -769,6 +790,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Topmass.Recruiter.Controllers.RewardController",
+    "Method": "OpenCV",
+    "RelativePath": "api/recruiter/Reward/OpenCV",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Topmass.Recruiter.Model.OpenSearchCVRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
     "Method": "GetDetailInfo",
     "RelativePath": "api/recruiter/SearchCV/GetDetailInfo",
@@ -802,37 +839,16 @@
   },
   {
     "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
-    "Method": "OpenCV",
-    "RelativePath": "api/recruiter/SearchCV/OpenCV",
+    "Method": "SaveCV",
+    "RelativePath": "api/recruiter/SearchCV/SaveCV",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "searchId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Topmass.Recruiter.Controllers.SearchCVController",
-    "Method": "SaveSearchCV",
-    "RelativePath": "api/recruiter/SearchCV/SaveSearchCV",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "searchId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "campaignId",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "Topmass.Recruiter.Model.SaveSearchCVRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

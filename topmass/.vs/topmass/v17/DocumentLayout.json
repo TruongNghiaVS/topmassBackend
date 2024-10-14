@@ -1,7 +1,29 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\vietbank\\crm\\topmass\\topmass\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{41C36BAB-79E0-4FD2-83E4-360F8F9A3303}|..\\Topmass.Admin\\Topmass.Admin.csproj|c:\\vietbank\\crm\\topmass\\topmass.admin\\pages\\searchpage\\_formsearchntd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41C36BAB-79E0-4FD2-83E4-360F8F9A3303}|..\\Topmass.Admin\\Topmass.Admin.csproj|c:\\vietbank\\crm\\topmass\\topmass.admin\\pages\\shared\\_slidebaradmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41C36BAB-79E0-4FD2-83E4-360F8F9A3303}|..\\Topmass.Admin\\Topmass.Admin.csproj|c:\\vietbank\\crm\\topmass\\topmass.admin\\pages\\ntd.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41C36BAB-79E0-4FD2-83E4-360F8F9A3303}|..\\Topmass.Admin\\Topmass.Admin.csproj|c:\\vietbank\\crm\\topmass\\topmass.admin\\pages\\ntd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41C36BAB-79E0-4FD2-83E4-360F8F9A3303}|..\\Topmass.Admin\\Topmass.Admin.csproj|c:\\vietbank\\crm\\topmass\\topmass.admin\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41C36BAB-79E0-4FD2-83E4-360F8F9A3303}|..\\Topmass.Admin\\Topmass.Admin.csproj|c:\\vietbank\\crm\\topmass\\topmass.admin\\pages\\model\\search\\baserequestsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41C36BAB-79E0-4FD2-83E4-360F8F9A3303}|..\\Topmass.Admin\\Topmass.Admin.csproj|c:\\vietbank\\crm\\topmass\\topmass.admin\\pages\\model\\search\\ibaserequestsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +31,99 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBaseRequestSearch.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Model\\search\\IBaseRequestSearch.cs",
+              "RelativeDocumentMoniker": "..\\Topmass.Admin\\Pages\\Model\\search\\IBaseRequestSearch.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Model\\search\\IBaseRequestSearch.cs",
+              "RelativeToolTip": "..\\Topmass.Admin\\Pages\\Model\\search\\IBaseRequestSearch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T10:15:15.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\Topmass.Admin\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\Topmass.Admin\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T10:07:30.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_slidebarAdmin.cshtml",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Shared\\_slidebarAdmin.cshtml",
+              "RelativeDocumentMoniker": "..\\Topmass.Admin\\Pages\\Shared\\_slidebarAdmin.cshtml",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Shared\\_slidebarAdmin.cshtml",
+              "RelativeToolTip": "..\\Topmass.Admin\\Pages\\Shared\\_slidebarAdmin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T10:12:37.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_formSearchNTD.cshtml",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\SearchPage\\_formSearchNTD.cshtml",
+              "RelativeDocumentMoniker": "..\\Topmass.Admin\\Pages\\SearchPage\\_formSearchNTD.cshtml",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\SearchPage\\_formSearchNTD.cshtml",
+              "RelativeToolTip": "..\\Topmass.Admin\\Pages\\SearchPage\\_formSearchNTD.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T10:07:35.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseRequestSearch.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Model\\search\\BaseRequestSearch.cs",
+              "RelativeDocumentMoniker": "..\\Topmass.Admin\\Pages\\Model\\search\\BaseRequestSearch.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\Model\\search\\BaseRequestSearch.cs",
+              "RelativeToolTip": "..\\Topmass.Admin\\Pages\\Model\\search\\BaseRequestSearch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T10:06:46.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NTD.cshtml",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\NTD.cshtml",
+              "RelativeDocumentMoniker": "..\\Topmass.Admin\\Pages\\NTD.cshtml",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\NTD.cshtml",
+              "RelativeToolTip": "..\\Topmass.Admin\\Pages\\NTD.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T10:05:51.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NTD.cshtml.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\NTD.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\Topmass.Admin\\Pages\\NTD.cshtml.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Admin\\Pages\\NTD.cshtml.cs",
+              "RelativeToolTip": "..\\Topmass.Admin\\Pages\\NTD.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T08:40:15.11Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
