@@ -44,6 +44,7 @@ namespace Topmass.Recruiter.Controllers
                 EducationalLevelArray = request.EducationalLevelArray,
                 Gender = request.Gender,
                 KeyWord = request.KeyWord,
+
                 Limit = request.Limit,
                 LocationCode = request.LocationCode,
                 Page = request.Page,
@@ -70,23 +71,13 @@ namespace Topmass.Recruiter.Controllers
             return StatusCode(reponse.StatusCode, reponse);
         }
 
-
-        [HttpPost]
-        public async Task<ActionResult> OpenCV(int searchId)
-        {
-            var resultUser = await GetCurrentUser();
-            var reponse = new BaseResult();
-            return StatusCode(reponse.StatusCode, reponse);
-        }
-
-
-
         [HttpPost]
         public async Task<ActionResult> SaveCV(SaveSearchCVRequest request)
         {
             var resultUser = await GetCurrentUser();
             var reponse = new BaseResult();
-            await _searchCVBusiness.SaveResultSearch():
+            await _searchCVBusiness.SaveResultSearch(request.SearchId,
+                request.LinkFile, resultUser.UserId, request.Campaign, request.JobId);
             return StatusCode(reponse.StatusCode, reponse);
         }
     }

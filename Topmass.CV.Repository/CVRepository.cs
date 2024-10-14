@@ -101,8 +101,20 @@ namespace Topmass.CV.Repository
             {
                 return respone;
             }
+
+            var sql = "sp_getAllCVByJob";
+
+            if (request.TypeData != 3)
+            {
+                sql = "sp_getAllCVByJob";
+            }
+            else
+            {
+                sql = "sp_getAllSearchCVByJob";
+            }
+
             var dataResult = await _resumeRepository
-                .ExecuteSqlProcerduceToList<JobApplyDisplayItem>("sp_getAllCVByJob",
+                .ExecuteSqlProcerduceToList<JobApplyDisplayItem>(sql,
                   new
                   {
                       request.JobId,
@@ -175,9 +187,23 @@ namespace Topmass.CV.Repository
             {
                 return respone;
             }
+            var sqlText = "sp_getAllCVByCampangn";
+            if (request.Source > 1)
+            {
+                sqlText = "sp_getAllCVBySearchCV";
+            }
+            var requestfilter = new
+            {
+                request.JobId,
+                request.TypeData,
+                request.Status,
+                request.CampagnId,
+                request.UserId
+            };
+
             var dataResult = await _resumeRepository
-                   .ExecuteSqlProcerduceToList<JobApplyDisplayItem>("sp_getAllCVByCampangn",
-                  request);
+                   .ExecuteSqlProcerduceToList<JobApplyDisplayItem>(sqlText,
+                  requestfilter);
             respone.Data = dataResult;
             return respone;
         }

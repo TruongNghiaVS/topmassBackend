@@ -4,6 +4,7 @@
     {
         public string? FullName { get; set; }
         public string? DayOfBirth { get; set; }
+
         public string GenderText
         {
             get
@@ -55,6 +56,7 @@
         }
 
         public int Point { get; set; }
+        public bool IsHideInfo { get; set; }
         public SearchCVItemDisplay()
         {
             FullName = string.Empty;
@@ -65,9 +67,12 @@
             LevelText = string.Empty;
             SalaryFrom = 0;
             SalaryTo = 0;
+            IsHideInfo = true;
             SalaryExpertText = "Thoả thuận";
             LastAccess = DateTime.Now.AddDays(-2);
             Point = 2;
         }
+
+
     }
 }

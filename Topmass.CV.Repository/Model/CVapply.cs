@@ -115,10 +115,12 @@
         public int CampagnId { get; set; }
         public int? TypeData { get; set; }
         public string? Key { get; set; }
+        public int Source { get; set; }
         public GetAllCVByCampaignRequest()
         {
 
             TypeData = -1;
+            Source = 1;
 
         }
 

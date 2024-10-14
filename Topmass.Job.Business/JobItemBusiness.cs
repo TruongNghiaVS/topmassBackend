@@ -525,6 +525,8 @@ namespace Topmass.Job.Business
             reponse.Data = dataJOb;
             return reponse;
         }
+
+
         public async Task<BaseResult> GetAllViewerOfJob
             (GetAllVierOfJobRequest itemAdd)
         {
@@ -902,6 +904,8 @@ namespace Topmass.Job.Business
 
 
         }
+
+
         public async Task<JobDetailResult> GetInfoJOb(CandidateJobInfoRequest request)
         {
 

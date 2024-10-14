@@ -153,7 +153,8 @@ namespace Topmass.CV.Business
                 TypeData = request.TypeData,
                 UserId = request.UserId,
                 Status = request.Status,
-                Key = request.Key
+                Key = request.Key,
+                Source = request.Source.HasValue ? request.Source.Value : 1
 
             };
             var dataResult = await _cVRepository

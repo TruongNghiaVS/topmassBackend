@@ -30,20 +30,13 @@ namespace Topmass.Recruiter.Controllers
         {
             var resultUser = await GetCurrentUser();
             var reponse = new BaseResult();
-            await _rewardBusiness.ExchangePointToOpenCV(request.SearchId,
-                2, resultUser.UserId);
+            var serchId = request.SearchId.HasValue ? request.SearchId.Value : -1;
+            await _rewardBusiness.ExchangePointToOpenCV(serchId,
+                2, resultUser.UserId, request.Campaign);
             return StatusCode(reponse.StatusCode, reponse);
         }
 
-        [HttpPost]
-        public async Task<ActionResult> SaveCV(OpenSearchCVRequest request)
-        {
-            var resultUser = await GetCurrentUser();
-            var reponse = new BaseResult();
-            await _rewardBusiness.ExchangePointToOpenCV(request.SearchId,
-                2, resultUser.UserId);
-            return StatusCode(reponse.StatusCode, reponse);
-        }
+
 
     }
 }

@@ -131,22 +131,7 @@ namespace Topmass.Recruiter.Controllers
         }
 
 
-        //[HttpGet]
-        //public async Task<ActionResult> GetALLJobOfCampagn(GetAllJobOfCampagnRequest request)
-        //{
-        //    var resultUser = await GetCurrentUser();
-        //    var reponse = new BaseResult();
-        //    var requestAdd = new CampagnSearchFilter()
-        //    {
-        //        From = request.From,
-        //        To = request.To,
-        //        Status = request.Status,
-        //        Email = resultUser.UserName,
-        //        HandleBy = int.Parse(resultUser.Id)
-        //    };
-        //    var result = await _bussiness.(requestAdd);
-        //    return StatusCode(result.StatusCode, result);
-        //}
+
         [HttpGet]
         public async Task<ActionResult> GetJobs([FromQuery] JobSearchRequestFilter request)
         {
@@ -172,6 +157,8 @@ namespace Topmass.Recruiter.Controllers
             var result = await _jobBusiness.GetallJob(requestAdd);
             return StatusCode(result.StatusCode, result);
         }
+
+
 
 
     }

@@ -48,6 +48,24 @@ namespace Topmass.Recruiter.Controllers
         }
 
         [HttpGet]
+        public async Task<ActionResult> GetAllSearchCVOfJob([FromQuery] InputGetAllSearchCVApplyOfJob request)
+        {
+            var resultUser = await GetCurrentUser();
+            var reponse = new BaseResult();
+            var requestAdd = new GetAllCVOfJobRequest()
+            {
+                TypeData = 3,
+                JobId = request.JobId,
+                UserId = int.Parse(resultUser.Id)
+            };
+
+            var result = await _cVBusiness.GetAllCVOfJob(requestAdd);
+            reponse.Data = result;
+            return StatusCode(reponse.StatusCode, reponse);
+        }
+
+
+        [HttpGet]
         public async Task<ActionResult> GetAllCVApply([FromQuery] InputGetAllCVApply request)
         {
             var resultUser = await GetCurrentUser();
@@ -59,6 +77,8 @@ namespace Topmass.Recruiter.Controllers
                 CampagnId = request.Recruitment.HasValue ? request.Recruitment.Value : -1,
                 Status = request.Status,
                 Key = request.Key,
+                Source = request.Source,
+
                 UserId = int.Parse(resultUser.Id)
             };
             var result = await _cVBusiness.GetAllCVApply(requestAdd);
@@ -87,8 +107,6 @@ namespace Topmass.Recruiter.Controllers
             reponse.Data = result;
             return StatusCode(reponse.StatusCode, reponse);
         }
-
-
         [HttpPost]
         public async Task<ActionResult> UpdateViewModel(IntputCVChangeViewModeRequest request)
         {

@@ -25,17 +25,19 @@
     public class InputGetAllCVApply
     {
         public int JobId { get; set; }
-        public int? CampagnId { get; set; }
+        public int? Campaign { get; set; }
         public int? TypeData { get; set; }
         public int? Recruitment { get; set; }
         public int? Status { get; set; }
 
         public string? Key { get; set; }
 
+        public int Source { get; set; }
         public InputGetAllCVApply()
         {
 
             TypeData = -1;
+            Source = 1;
 
         }
     }
@@ -80,6 +82,18 @@
         }
     }
 
+
+    public class InputGetAllSearchCVApplyOfJob
+    {
+        public int JobId { get; set; }
+
+
+        public InputGetAllSearchCVApplyOfJob()
+        {
+
+
+        }
+    }
     public class InputGetInfoCV
     {
         public int CVId { get; set; }

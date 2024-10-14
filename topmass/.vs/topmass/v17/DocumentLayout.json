@@ -1,14 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\vietbank\\crm\\topmass\\topmass\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{861D33D2-6A0C-43C1-B0ED-1C8DBD7BFE0D}|..\\recruiter\\Topmass.Recruiter\\Topmass.Recruiter.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter\\controllers\\searchcvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{861D33D2-6A0C-43C1-B0ED-1C8DBD7BFE0D}|..\\recruiter\\Topmass.Recruiter\\Topmass.Recruiter.csproj|c:\\vietbank\\crm\\topmass\\recruiter\\topmass.recruiter\\controllers\\rewardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -16,33 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RewardController.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
-              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
-              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter\\Controllers\\RewardController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCoAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:48:57.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SearchCVController.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
-              "RelativeDocumentMoniker": "..\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
-              "RelativeToolTip": "..\\recruiter\\Topmass.Recruiter\\Controllers\\SearchCVController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABEAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:12:55.737Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

@@ -107,6 +107,8 @@ namespace Topmass.CV.Business.Model
         public int? Status { get; set; }
         public string? Key { get; set; }
 
+        public int? Source { get; set; }
+
         public GetAllOfHumanRequest()
         {
 
@@ -114,6 +116,7 @@ namespace Topmass.CV.Business.Model
             Status = -1;
             CampagnId = -1;
             JobId = -1;
+            Source = 1;
 
         }
 

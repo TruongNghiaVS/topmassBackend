@@ -24,8 +24,16 @@ namespace Topmass.Recruiter.Bussiness
             _rewardTransactionRepository = rewardTransactionRepository;
             _searchCVResultRepository = searchCVResultRepository;
         }
-        public async Task<BaseResult> ExchangePointToOpenCV(int searchId, int point, int userId, int campaignId = -1)
+        public async Task<BaseResult> ExchangePointToOpenCV(int searchId,
+            int point,
+            int userId,
+            int? campaignId = -1)
         {
+
+            if (!campaignId.HasValue)
+            {
+                campaignId = -1;
+            }
             var reponse = new BaseResult();
             var recruiterItem = await _repository.GetById(userId);
             if (recruiterItem == null)
@@ -56,19 +64,35 @@ namespace Topmass.Recruiter.Bussiness
                 UpdatedBy = userId
             };
             await _rewardTransactionRepository.AddOrUPdate(historyItem);
-            var searchResult = new SearchCVResultModel()
+
+            var resultCheck = await _searchCVResultRepository.FindOneByStatementSql<SearchCVResultModel>(
+               "select * from SearchResult where relId=  @searchId  and  CreatedBy = @userid",
+                new
+                {
+                    searchId = searchId,
+                    CreatedBy = userId
+                }
+               );
+
+            if (resultCheck.Id > 0)
             {
-                CampaignId = campaignId,
-                CreateAt = DateTime.Now,
-                CreatedBy = userId,
-                RelId = userId,
-                SearchId = searchId,
-                Status = 0,
-                UpdateAt = DateTime.Now,
-                UpdatedBy = userId,
-                Deleted = false
-            };
-            await _searchCVResultRepository.AddOrUPdate(searchResult);
+                resultCheck.Status = 0;
+            }
+
+            else
+                resultCheck = new SearchCVResultModel()
+                {
+                    CampaignId = campaignId.Value,
+                    CreateAt = DateTime.Now,
+                    CreatedBy = userId,
+                    RelId = searchId,
+                    SearchId = searchId,
+                    Status = 0,
+                    UpdateAt = DateTime.Now,
+                    UpdatedBy = userId,
+                    Deleted = false
+                };
+            await _searchCVResultRepository.AddOrUPdate(resultCheck);
             return reponse;
         }
 

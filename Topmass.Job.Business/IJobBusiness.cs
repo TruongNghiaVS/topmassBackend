@@ -18,21 +18,21 @@ namespace Topmass.Job.Business
 
         public Task<BaseResult> GetallJob(JobSearchRequest request);
 
+
+
+
         public Task<BaseResult> GetAllViewerOfJob(GetAllVierOfJobRequest request);
 
         public Task<BaseResult> AddViewJob(ViewJobUserAddRequest request);
         public Task<ReportStaticInfoOverviewItem> GetOverviewJob(GetOverViewByJobId request);
         public Task<GetInfoForEditReponse> GetInfoForEdit(JobInfoRequest jobInfo);
 
-
         // candidate:
-
-
         public Task<JobDetailResult> GetInfoJOb(CandidateJobInfoRequest request);
-
         public Task<JobRelattionReponse> GetRelationJob(JobRelattionRequest request);
-
         public Task<JobRecommendedReponse> GetRecomendJob(JobRecommendedRequest request);
+
+
 
     }
 }
