@@ -64,7 +64,7 @@ namespace Topmass.CV.Repository
         public async Task<ApplyJobWithCreateCVReponse> ApplyJobWithCreateCV(ApplyJobWithCreateCV request)
         {
             var reponse = new ApplyJobWithCreateCVReponse();
-            var result = await _jobApplyRepository.ExecuteSQL("sp_applyJobWithCreateCV", request);
+            var result = await _jobApplyRepository.ExecuteStatementSql("sp_applyJobWithCreateCV", request);
 
             reponse.Success = true;
 

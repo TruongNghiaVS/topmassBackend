@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|solutionrelative:filemedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|c:\\vietbank\\crm\\topmass\\topmass.image\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|solutionrelative:controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|c:\\vietbank\\crm\\topmass\\topmass.image\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|c:\\vietbank\\crm\\topmass\\topmass.image\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|solutionrelative:controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9FBD92F-6DC6-4E9C-971E-0FF2505D7097}|Topmass.Image.csproj|c:\\vietbank\\crm\\topmass\\topmass.image\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -26,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Image\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Image\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwCIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T02:45:44.969Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,7 +49,7 @@
               "RelativeDocumentMoniker": "FileMedia.cs",
               "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Image\\FileMedia.cs",
               "RelativeToolTip": "FileMedia.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowCYAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T09:51:47.622Z",
               "EditorCaption": ""
@@ -56,28 +69,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Image\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Image\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwCAAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T04:48:51.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MediaController.cs",
               "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\Topmass.Image\\Controllers\\MediaController.cs",
               "RelativeDocumentMoniker": "Controllers\\MediaController.cs",
               "ToolTip": "C:\\vietbank\\crm\\topmass\\Topmass.Image\\Controllers\\MediaController.cs",
               "RelativeToolTip": "Controllers\\MediaController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwB4AAAA0AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T04:43:50.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T04:43:50.848Z"
             },
             {
               "$type": "Bookmark",

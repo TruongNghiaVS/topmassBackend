@@ -140,7 +140,7 @@ namespace Topmass.Bussiness.Company
 
 
 
-        public async Task<dynamic> GetAllJobOfCompany(string slug, int userId = -1)
+        public async Task<dynamic> GetAllJobOfCompany(string slug, int userId = -1, int location = -1, string keyword = "")
         {
 
             var dataCompany = await GetCompanyBySlug(slug);
@@ -154,7 +154,9 @@ namespace Topmass.Bussiness.Company
             var allJob = await _repository.ExecuteSqlProcerduceToList<JobCompanyItemDisplay>("sp_GetAllJobOfCompany",
             new
             {
-                companyId = dataCompany.RelId
+                companyId = dataCompany.RelId,
+                location = location,
+                keyword = keyword
             });
             if (userId > 0)
             {
@@ -179,6 +181,8 @@ namespace Topmass.Bussiness.Company
                     item.IsJobSave = itemSave;
                     item.IsJobApply = itemApply;
                     item.IsLike = itemSave;
+                    item.IsSave = itemSave;
+                    item.IsApply = itemApply;
 
                     listNew.Add(item);
                 }

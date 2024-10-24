@@ -47,6 +47,16 @@ namespace topmass
                     ValidateIssuerSigningKey = true
                 };
             });
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllHeaders",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
             builder.Services.AddAuthorization();
             var app = builder.Build();
             //if (app.Environment.IsDevelopment())
@@ -54,6 +64,8 @@ namespace topmass
             //    app.UseSwagger();
             //    app.UseSwaggerUI();
             //}
+
+
 
             app.UseSwagger();
             app.UseSwaggerUI();

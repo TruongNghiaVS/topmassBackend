@@ -45,7 +45,7 @@ namespace Topmass.Image
             {
                 FileName = fileName,
 
-                FullLink = "http://42.115.94.180:8584/static/" + shortlink,
+                FullLink = "https://cnd.topmass.vn/static/" + shortlink,
 
                 ShortLink = shortlink
             };

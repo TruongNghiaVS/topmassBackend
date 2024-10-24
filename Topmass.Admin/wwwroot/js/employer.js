@@ -35,15 +35,10 @@ function loadData(groupId) {
                 $('input[name="__RequestVerificationToken"]').val()
         },
         type: "GET",
-
         url: '/GroupPage?handler=ListDataMember&groupId=' + groupId,
-
         success: function (data) {
-
             $("#DataListView").empty();
             $("#DataListView").append(data);
-       
-
         },
         error: function (jqXHR, exception) {
            
@@ -81,7 +76,6 @@ function OpenChangPassword(id = -1, router = "employee") {
     });
 }
 function openFormEdit(id = -1, router = "employee") {
-  
     var dataString = "id=" + id;
     $.ajax({
         headers: {
@@ -91,15 +85,10 @@ function openFormEdit(id = -1, router = "employee") {
         type: "GET",
   
         url: '/' + router + '?handler=FormEdit&id='+id,
-     
         success: function (data) {
             $("#contentModal").empty();
             $("#contentModal").append(data);
             $('#formModal').modal('show'); 
-      
-
-            
-
         },
         error: function (jqXHR, exception) {
            
@@ -150,8 +139,6 @@ function openFormAssignee(id = -1, router = "OrderAssignee") {
     });
 }
 function login() {
-
-
     var userName = $("#txtUserName").val();
     var password = $("#txtPassword").val();
     if (userName == "") {
@@ -173,8 +160,14 @@ function login() {
         UserName: userName,
         Password: password
     };
-
     submitForm("formLogin");
+    postAjax('/login?handler=Login', dataRequest)
+    then((value) => {
+        debugger;
+        console.log(value);
+        // Expected output: "Success!"
+    });
+
     return;
     $.ajax({
         headers: {
@@ -189,7 +182,6 @@ function login() {
             if (data.success == true) {
                 window.location.href = "/";
             }
-         
         },
         error: function (jqXHR, exception) {
           
@@ -200,6 +192,29 @@ function login() {
     });
 
 
+}
+
+
+function postAjax(url, body, callSuccess =nulll, error = null, complete = null) {
+    $.ajax({
+        headers: {
+            "RequestVerificationToken":
+                $('input[name="__RequestVerificationToken"]').val()
+        },
+        type: "POST",
+        datatype: "JSON",
+        url: url,
+        data: body,
+        success: function (data) {
+            resolve('I am doing something');
+        },
+        error: function (jqXHR, exception) {
+
+        },
+        complete: function () {
+
+        },
+    });
 }
 function updateEmployInfo(idEmp) {
 
@@ -2167,16 +2182,14 @@ function closeFormUser()
 
 
 function UploadImage1() {
-
-
+    alert ("3");
+    return;
     var fileInput = document.getElementById("fileImport");
- 
     if (fileInput.files.length < 1)
         return;
     var fileAccess = fileInput.files[0];
     var formData = new FormData();
     formData.append('FileRequest', fileAccess);
-
     $.ajax({
         headers: {
             "RequestVerificationToken":
@@ -2185,12 +2198,13 @@ function UploadImage1() {
         type: "POST",
         processData: false,  // tell jQuery not to process the data
         contentType: false,
-        url: '/Candidate?handler=ImportSource',
+        url: '/Candidate?handler=mportSource',
         data: formData ,
         success: function (data, reponse) {
                
                Swal.fire({
-                    position: "center",
+           
+                position: "center",
                     icon: "success",
                     title: "import thành công",
                     showConfirmButton: false,

@@ -11,7 +11,6 @@ namespace topmass.Model
     [Authorize]
     public class CompanyController : BaseController
     {
-
         private readonly ILogger<CompanyController> _logger;
         private readonly ICompanyBusiness _companyBusiness;
         public CompanyController(ILogger<CompanyController> logger,
@@ -83,7 +82,7 @@ namespace topmass.Model
             }
             var datas =
                await _companyBusiness
-               .GetAllJobOfCompany(request.Slug, userId);
+               .GetAllJobOfCompany(request.Slug, userId, request.Location, request.Keyword);
             baseReult.Data = datas;
             return StatusCode(baseReult.StatusCode, baseReult);
         }

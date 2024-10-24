@@ -183,6 +183,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Topmass.Recruiter.Controllers.CompanyController",
+    "Method": "GetAllPartner",
+    "RelativePath": "api/recruiter/Company/GetAllPartner",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Topmass.Recruiter.Controllers.CVController",
     "Method": "AddLogStatus",
     "RelativePath": "api/recruiter/CV/AddLogStatus",
@@ -314,6 +324,70 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Topmass.Recruiter.Controllers.ExchangeCVController",
+    "Method": "CancleItem",
+    "RelativePath": "api/recruiter/ExchangeCV/CancleItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "Topmass.Recruiter.Model.InputExchangeDetail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.ExchangeCVController",
+    "Method": "ExchangeCV",
+    "RelativePath": "api/recruiter/ExchangeCV/ExchangeCV",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Topmass.Recruiter.Model.InputExchangeCVRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.ExchangeCVController",
+    "Method": "GetDetail",
+    "RelativePath": "api/recruiter/ExchangeCV/GetDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.ExchangeCVController",
+    "Method": "GetHistory",
+    "RelativePath": "api/recruiter/ExchangeCV/GetHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Topmass.Recruiter.Model.InputExchangeSearchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Topmass.Recruiter.Controllers.ForgetController",
     "Method": "ChangePassword",
     "RelativePath": "api/recruiter/Forget/ChangePassword",
@@ -368,7 +442,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "From",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "To",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -378,7 +463,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "From",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "To",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -878,7 +974,17 @@
       },
       {
         "Name": "Gender",
-        "Type": "System.Int32",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToYear",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
@@ -939,6 +1045,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Topmass.Recruiter.Controllers.WebController",
+    "Method": "GetAllPartner",
+    "RelativePath": "api/recruiter/Web/GetAllPartner",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Topmass.Admin.Business;
+
 namespace Topmass.Admin
 {
     public class Program
@@ -8,14 +11,27 @@ namespace Topmass.Admin
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-
+            builder.Services.ConfigAdminBusiness();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+                options.SlidingExpiration = true;
+                options.AccessDeniedPath = "/Home/Forbidden";
+                options.LoginPath = "/Login";
+            });
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.SameSite = SameSiteMode.None;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+            });
+            builder.Services.AddHttpContextAccessor();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -24,10 +40,11 @@ namespace Topmass.Admin
 
             app.UseRouting();
 
+
+
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.MapRazorPages();
-
             app.Run();
         }
     }

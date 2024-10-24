@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+using Topmass.Admin;
+using Topmass.Admin.Business;
 using Topmass.Admin.Pages.Model.search;
 
 namespace crmHuman.Pages
 {
     //[Authorize]
-    public class NTDModel : PageModel
+
+    public class NTDModel : BaseModel
     {
         private readonly ILogger<NTDModel> _logger;
 
@@ -19,6 +21,7 @@ namespace crmHuman.Pages
         public string KeyPage { get; set; }
 
         public List<string> TableColumnText { get; set; }
+        private INTDBusiness business { get; set; }
 
         public int TotalRecord
         {
@@ -29,134 +32,53 @@ namespace crmHuman.Pages
 
             }
         }
-        public NTDModel(ILogger<NTDModel> logger
+        public NTDModel(ILogger<NTDModel> logger,
+            INTDBusiness _business
 
             )
         {
             _logger = logger;
             TitlePage = "Danh sách nhà tuyển dụng";
-            KeyPage = "Employee";
+            KeyPage = "NTD";
             TableColumnText = new List<string>()
             {
-                "STT","Họ tên","Tài khoản","Vai trò","Line gọi","Nhóm", "Ngày Onboard","Cập nhật gần nhất","Thao tác"
+                "STT","Mã","Tên người đại diện","Tên đăng nhập","Tên công ty", "MST", "Số điện thoại", "Trạng thái", "Cấp độ xác thực","Cập nhật gần nhất","Thao tác"
             };
 
             NameController = "NTD";
+            business = _business;
+            DataAll = new BaseList();
         }
-
-
-
         public async Task<ActionResult> OnGet([FromQuery] NTDRequest request)
         {
 
             return await GetAll(request);
         }
-
         public async Task<ActionResult> GetAll(NTDRequest request2)
         {
             RequestSearch = request2;
-
-
+            var dataAll = await business.GetAllNTD(new SearchNTDRequest()
+            {
+                From = request2.From,
+                Limit = request2.Limit,
+                Page = request2.Page,
+                To = request2.To,
+                Token = request2.Token,
+                Status = request2.Status == "0" ? 0 : 1,
+                AuthenLevel = int.Parse(request2.AuthenLevel)
+            });
+            DataAll.Data = dataAll.Data;
             return Page();
         }
 
         public virtual async Task<PartialViewResult> OnGetFormEdit(int id)
-
         {
-            //GetInfoUser();
             var resultView = new
             {
-
+                Id = -1
             };
-
-            //if (id > 0)
-            //{
-            //    resultView = await _empBusiness.GetById(id);
-
-            //}
-            return Partial("editOrUpdateEmployee", resultView);
+            return Partial("PartialView/EditNTD", resultView);
         }
-
-
-        //  public async Task<IActionResult> OnPostDelete
-        //(int Id = -1)
-        //  {
-
-        //      var listEror = new List<object>();
-
-        //      if (Id < 0)
-        //      {
-        //          var itemError = new
-        //          {
-        //              name = "id",
-        //              Content = "Thiếu thông tin cần xoá"
-        //          };
-        //          listEror.Add(itemError);
-
-        //      }
-        //      if (listEror.Count > 0)
-        //      {
-        //          return new JsonResult(listEror)
-        //          {
-        //              StatusCode = StatusCodes.Status400BadRequest
-        //          };
-        //      }
-
-        //      var result = true;
-
-        //      result = await _empBusiness.Delete(Id);
-        //      var dataReponse = new
-        //      {
-        //          success = result,
-
-        //      };
-        //      return new JsonResult(dataReponse)
-        //      {
-        //          StatusCode = StatusCodes.Status200OK
-
-        //      };
-        //  }
-
-
-        //   public async Task<IActionResult> OnPostReactive
-        //(int Id = -1)
-        //   {
-
-        //       var listEror = new List<object>();
-
-        //       if (Id < 0)
-        //       {
-        //           var itemError = new
-        //           {
-        //               name = "id",
-        //               Content = "Thiếu thông tin cần xoá"
-        //           };
-        //           listEror.Add(itemError);
-
-        //       }
-        //       if (listEror.Count > 0)
-        //       {
-        //           return new JsonResult(listEror)
-        //           {
-        //               StatusCode = StatusCodes.Status400BadRequest
-        //           };
-        //       }
-
-        //       var result = true;
-
-        //       result = await _empBusiness.Delete(Id, true);
-        //       var dataReponse = new
-        //       {
-        //           success = result,
-
-        //       };
-        //       return new JsonResult(dataReponse)
-        //       {
-        //           StatusCode = StatusCodes.Status200OK
-
-        //       };
-        //   }
-
 
 
     }

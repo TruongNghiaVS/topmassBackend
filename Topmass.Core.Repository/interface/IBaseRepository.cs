@@ -31,7 +31,7 @@ namespace Topmass.Core.Repository
             object parameter = null)
             where T : class, new();
 
-        public Task<bool> ExecuteSQL(string sql = "",
+        public Task<bool> ExecuteStatementSql(string sql = "",
         object parameter = null);
 
     }

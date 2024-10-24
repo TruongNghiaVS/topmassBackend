@@ -399,7 +399,7 @@ namespace Topmass.Core.Repository
 
         }
 
-        public async Task<bool> ExecuteSQL(string sql = "",
+        public async Task<bool> ExecuteStatementSql(string sql = "",
          object parameter = null)
 
         {
@@ -438,7 +438,7 @@ namespace Topmass.Core.Repository
             var _baseTable = tableName;
 
             var sql = "UPDATE " + "[" + _baseTable + "]" + " SET Deleted= @del  WHERE Id = @id";
-            return await ExecuteSQL(sql, new
+            return await ExecuteStatementSql(sql, new
             {
                 Id = id,
                 del = delete
@@ -452,7 +452,7 @@ namespace Topmass.Core.Repository
                 tableName = tableDelete;
             }
             var sql = "UPDATE " + "[" + _baseTable + "]" + " SET Deleted= @del, UpdateAt = getdate()   WHERE Id = @id";
-            return await ExecuteSQL(sql, new
+            return await ExecuteStatementSql(sql, new
             {
                 Id = id,
                 del = delete

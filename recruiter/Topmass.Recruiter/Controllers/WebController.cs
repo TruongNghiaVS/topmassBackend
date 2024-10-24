@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Topmass.Recruiter.Bussiness;
 using TopMass.Core.Result;
 using TopMass.Web.Business;
 namespace Topmass.Recruiter.Controllers
@@ -9,16 +9,20 @@ namespace Topmass.Recruiter.Controllers
 
     public class WebController : BaseController
     {
-
         private readonly ILogger<WebController> _logger;
         private readonly IPageBusiness _pageBusiness;
+        private readonly IRecruiterBusiness _recruiterBusiness;
+        private readonly ICompanyBusiness _companyBusiness;
         public WebController(ILogger<WebController> logger,
-          IPageBusiness pageBusiness) : base(logger)
+            IRecruiterBusiness recruiterBusiness,
+
+            ICompanyBusiness companyBusiness
+          ) : base(logger)
         {
             _logger = logger;
-            _pageBusiness = pageBusiness;
+            _recruiterBusiness = recruiterBusiness;
+            _companyBusiness = companyBusiness;
         }
-
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult> GetContentPage(string pageSlug)
@@ -67,5 +71,15 @@ namespace Topmass.Recruiter.Controllers
             return StatusCode(result.StatusCode, result);
         }
 
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<ActionResult> GetAllPartner()
+        {
+            var datas = await _companyBusiness.GetAllPartner();
+
+            return StatusCode(datas.StatusCode, datas.Data);
+        }
+
     }
+
 }

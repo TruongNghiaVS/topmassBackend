@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Topmass.Admin.Business\Topmass.Admin.Business.csproj" />
+  </ItemGroup>
+
 </Project>

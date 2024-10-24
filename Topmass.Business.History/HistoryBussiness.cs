@@ -34,14 +34,20 @@ namespace Topmass.Business.History
             return true;
         }
 
-        public async Task<HIstoryDataReponse> GetAccessLog(int userId, int source = 2, int typedata = 1)
+        public async Task<HIstoryDataReponse> GetAccessLog(int userId, int source = 2, int typedata = 1,
+
+            DateTime? from = null, DateTime? to = null
+            )
         {
             var reponse = new HIstoryDataReponse();
             var dataAll = await _logActionModelRepository.GetAllHistory(new Core.Repository.Model.GetAllHistoryRequest()
             {
                 Source = source,
                 Typedata = typedata,
-                UserId = userId
+
+                UserId = userId,
+                From = from,
+                To = to
             });
             var listData = new List<HIstoryDataDisplay>();
             foreach (var item in dataAll)

@@ -13,13 +13,11 @@ namespace Topmass.Recruiter.Repository
             services.AddSingleton<IRecruiterRepository, RecruiterRepository>();
             services.AddSingleton<IActiveCodeRecruiterRepository, ActiveCodeRecruiterRepository>();
             services.AddSingleton<IRecruiterInfoRepository, RecruiterInfoRepository>();
-
             services.AddSingleton<IBusinessLicenseRepository, BusinessLicenseRepository>();
             services.AddSingleton<IBusinessLicenseLogRepository, BusinessLicenseLogRepository>();
-
             services.AddSingleton<IRewardTransactionRepository, RewardTransactionRepository>();
-
-
+            services.AddSingleton<IExchangeCVRepository, ExchangeCVRepository>();
+            services.AddSingleton<IExchangeCVDetailRepository, ExchangeCVDetailRepository>();
 
         }
     }

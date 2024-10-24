@@ -61,7 +61,7 @@ namespace topmass.Model
             {
                 return StatusCode(reponse.StatusCode, reponse);
             }
-            await _jobBusiness.RemoveJobSave(request.JobId);
+            await _jobBusiness.RemoveJobSave(request.JobId, resultUser.UserId);
             return StatusCode(reponse.StatusCode, true);
         }
 

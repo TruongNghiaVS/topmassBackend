@@ -323,8 +323,19 @@ namespace Topmass.Job.Business.Model
         public string Requirement { get; set; }
 
         public string Description { get; set; }
+
+        public string Skill { get; set; }
         public string Slug { get; set; }
+        public DateTime? Expired_date { get; set; }
         public JobCommonData CommonData { get; set; }
+
+
+        public string CurrencyCode { get; set; }
+
+
+        public int SalaryFrom { get; set; }
+
+        public int SalaryTo { get; set; }
         public JobInfoDisplay()
         {
             JobName = "";
@@ -335,6 +346,7 @@ namespace Topmass.Job.Business.Model
             Benefit = "";
             Requirement = "";
             Description = "";
+            Expired_date = null;
         }
     }
 

@@ -143,7 +143,7 @@ namespace Topmass.CV.Business
             profileUser = new ProfileCVUser();
             return profileUser;
         }
-        public async Task<dynamic> GetFullProfileUser(string searchId)
+        public async Task<dynamic> GetFullProfileUser(string searchId, int userHuamnId)
         {
             var data = await _repository.FindOneByStatementSql<SearchCVModel>
             ("select * from SearchCV where id = @searchId", new
@@ -166,6 +166,22 @@ namespace Topmass.CV.Business
             var allCertify = await GetAllCertifyUser(userId, 1);
             var profileCv = await GetProfileUserCV(userId);
 
+
+            var resultCheck = await _searchCVResultRepository.FindOneByStatementSql<SearchCVResultModel>(
+              "select * from SearchResult where relId=  @searchId  and  CreatedBy = @userid",
+              new
+              {
+                  searchId,
+                  userid = userHuamnId
+              }
+          );
+
+            var hideInfo = true;
+            if (resultCheck != null && resultCheck.Id > 0)
+            {
+                hideInfo = false;
+            }
+
             var dataInfo = new
             {
                 educations = educations.Data,
@@ -177,8 +193,8 @@ namespace Topmass.CV.Business
                 allReward = allReward.Data,
                 allCertify = allCertify.Data,
                 profileCv,
-                hidePhone = true,
-                hideEmail = true
+                hidePhone = hideInfo,
+                hideEmail = hideInfo
             };
             baseReult.Data = dataInfo;
             return baseReult;
@@ -209,10 +225,10 @@ namespace Topmass.CV.Business
                 new
                 {
                     searchId,
-                    CreatedBy = userId
+                    userid = userId
                 }
             );
-            if (resultCheck != null)
+            if (resultCheck != null && resultCheck.Id > 0)
             {
                 data.IsHideInfo = false;
             }

@@ -14,11 +14,13 @@ namespace Topmass.Core.Repository
         public async Task<List<LogActionModel>> GetAllHistory(GetAllHistoryRequest request)
         {
 
-            var sqlStatement = "SELECT * from LogAction where  typeData  = @typedata and userId = @userId and source =@source order by CreateAt desc";
+            var sqlStatement = "SELECT * from LogAction where  typeData  = @typedata and userId = @userId and source =@source and CreateAt >= @from and CreateAt <= @to order by CreateAt desc";
             var parramRequest = new
             {
                 userId = request.UserId,
                 typedata = request.Typedata,
+                from = request.From,
+                to = request.To,
                 source = request.Source
             };
             var datas = await this.ExecuteSqlProcerduceToList<LogActionModel>(sqlStatement, parramRequest, System.Data.CommandType.Text);

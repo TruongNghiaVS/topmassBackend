@@ -343,3 +343,4 @@ const mainChart = new Chart(document.getElementById('main-chart'), {
     }
   }
 })
+

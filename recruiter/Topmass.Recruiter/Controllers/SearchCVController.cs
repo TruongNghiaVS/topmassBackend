@@ -18,7 +18,6 @@ namespace Topmass.Recruiter.Controllers
         private readonly ISearchCVBusiness _searchCVBusiness;
 
         public SearchCVController(ILogger<SearchCVController> logger,
-
             ICVBusiness cVBusiness,
             ICVUtilities cVUtilities,
             IProfileCVBusiness profileCVBusiness,
@@ -40,11 +39,10 @@ namespace Topmass.Recruiter.Controllers
             var searchRequest = new SearchCVRequestInfo()
             {
                 CvKey = request.CvKey,
-                DayOfBirth = request.DayOfBirth,
+                DayOfBirth = null,
                 EducationalLevelArray = request.EducationalLevelArray,
-                Gender = request.Gender,
+                Gender = request.Gender.HasValue ? request.Gender.Value : -1,
                 KeyWord = request.KeyWord,
-
                 Limit = request.Limit,
                 LocationCode = request.LocationCode,
                 Page = request.Page,
@@ -54,13 +52,15 @@ namespace Topmass.Recruiter.Controllers
             reponse.Data = result;
             return StatusCode(reponse.StatusCode, reponse);
         }
+
         [HttpGet]
         public async Task<ActionResult> GetProfileGenerate(string? searchId)
         {
             var resultUser = await GetCurrentUser();
-            var result = await _business.GetFullProfileUser(searchId);
+            var result = await _business.GetFullProfileUser(searchId, resultUser.UserId);
             return StatusCode(result.StatusCode, result);
         }
+
         [HttpGet]
         public async Task<ActionResult> GetDetailInfo(string searchId)
         {

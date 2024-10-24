@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Topmass.Business.History;
+using Topmass.Recruiter.Model;
 using TopMass.Core.Result;
 
 namespace Topmass.Recruiter.Controllers
@@ -19,24 +20,25 @@ namespace Topmass.Recruiter.Controllers
             _bussiness = historyBussiness;
 
         }
-
         [HttpGet]
-        public async Task<ActionResult> GetHistoryLogin()
+        public async Task<ActionResult> GetHistoryLogin([FromQuery] HistoryRequest request)
         {
             var resultUser = await GetCurrentUser();
             var reponse = new BaseResult();
-            var result = await _bussiness.GetAccessLog(resultUser.UserId, 2, 1);
+            request.From = new DateTime(request.From.Value.Year, request.From.Value.Month, request.From.Value.Day, 0, 0, 0);
+            request.To = new DateTime(request.To.Value.Year, request.To.Value.Month, request.To.Value.Day, 23, 59, 59);
+            var result = await _bussiness.GetAccessLog(resultUser.UserId, 2, 1, request.From, request.To);
             reponse.Data = result;
             return StatusCode(reponse.StatusCode, reponse);
         }
-
-
         [HttpGet]
-        public async Task<ActionResult> GetLogUpdateAccount()
+        public async Task<ActionResult> GetLogUpdateAccount([FromQuery] HistoryRequest request)
         {
             var resultUser = await GetCurrentUser();
             var reponse = new BaseResult();
-            var result = await _bussiness.GetAccessLog(resultUser.UserId, 2, 2);
+            request.From = new DateTime(request.From.Value.Year, request.From.Value.Month, request.From.Value.Day, 0, 0, 0);
+            request.To = new DateTime(request.To.Value.Year, request.To.Value.Month, request.To.Value.Day, 23, 59, 59);
+            var result = await _bussiness.GetAccessLog(resultUser.UserId, 2, 2, request.From, request.To);
             reponse.Data = result;
             return StatusCode(reponse.StatusCode, reponse);
         }

@@ -1,0 +1,292 @@
+﻿@page
+@using crmHuman.Pages
+@model NTDDetailModel
+@{
+    ViewData["Title"] = Model.TitlePage;
+}
+<div class="pagetitle">
+    <h1>@Model.TitlePage</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/Employee">Nhân viên</a></li>
+            <li class="breadcrumb-item active">Danh sách</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+<div class="row">
+    
+ <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+
+              <!-- Default Tabs -->
+              <ul class="nav nav-tabs d-flex" id="myTabjustified" role="tablist">
+               <li class="nav-item flex-fill" role="presentation">
+                  <button class="nav-link w-100 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-justified" type="button" role="tab" aria-controls="home" aria-selected="true">Thông tin người đại diện</button>
+                </li>
+                <li class="nav-item flex-fill" role="presentation">
+                  <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-justified" type="button" role="tab" aria-controls="profile" aria-selected="false">Giấy đăng ký</button>
+                </li>
+                <li class="nav-item flex-fill" role="presentation">
+                  <button class="nav-link w-100" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-justified" type="button" role="tab" aria-controls="contact" aria-selected="false">Thông tin công ty</button>
+                </li>
+
+
+
+              </ul>
+              <div class="tab-content pt-2" id="myTabjustifiedContent">
+                <div class="tab-pane fade show active" id="home-justified" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row justify-content-center"> 
+                    <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                                    @{
+                                        var listcolumnInfoWhosePerson = new List<ControlItem>();
+
+                                        listcolumnInfoWhosePerson.Add(new ControlItem()
+                                        {
+                                            Lable = "Họ", Name = "txtFirstName", Value = ""
+                                        });
+
+                                        listcolumnInfoWhosePerson.Add(new ControlItem()
+                                        {
+                                        Lable = "Tên",
+                                       Name = "txtLastName",
+                                        Value = ""
+                                        });
+                                        listcolumnInfoWhosePerson.Add(new ControlItem()
+                                        {
+                                            Lable = "Giới  tính",
+                                            Name = "cbGender",
+                                            Value = ""
+                                        });
+
+                                        listcolumnInfoWhosePerson.Add(new ControlItem()
+                                        {
+                                        Lable = "Số diện thoại",
+                                        Name = "txtphone",
+                                        Value = ""
+                                        });
+                                    }
+
+                                @foreach (var control in listcolumnInfoWhosePerson)
+                                {
+
+                                    Html.RenderPartial(control.PathControl, control);
+
+                                }
+
+                                    <br>
+                                    <div class="justify-content-center">
+                                    <button type="button"  class="btn btn-primary">Cập nhật</button>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile-justified" role="tabpanel" aria-labelledby="profile-tab">
+                        @{
+                            var listcolumnLicence = new List<ControlItem>();
+
+                            listcolumnLicence.Add(new ImageControlItem()
+                            {
+                            Value = "",
+                            Lable = "Logo ( chỉ chấp nhận file hình)",
+                            Name = "intputLogo",
+
+
+                            });
+
+                            listcolumnLicence.Add(new ControlItem()
+                            {
+                            Lable = "Trạng thái",
+                            Name = "cbStatus",
+                            Value = ""
+                            });
+                            listcolumnLicence.Add(new ControlItem()
+                            {
+                            Lable = "Lý do, ghi chú",
+                            Name = "txtNote",
+                            Value = ""
+                            });
+                        }
+
+                        @foreach (var control in listcolumnLicence)
+                        {
+
+                            Html.RenderPartial(control.PathControl, control);
+
+                        }
+
+                        <br>
+                        <div class="justify-content-center">
+                            <button type="button" class="btn btn-primary">Cập nhật</button>
+                        </div>
+
+                </div>
+                <div class="tab-pane fade" id="contact-justified" role="tabpanel" aria-labelledby="contact-tab">
+                               <div class="row "> 
+                                 <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <div class="row">
+
+                                            <div class="col-lg-6 col-md-6  ">
+                                                @{
+                                                    
+                                                    var listColumnLeft = new List<ControlItem>();
+
+                                                    listColumnLeft.Add(new AvatarControlItem()
+                                                    {
+                                                    Value = "",
+                                                    Lable = "Logo Công ty",
+                                                    Name = "logoCompany",
+
+
+                                                    });
+                                                    listColumnLeft.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Mã số thuế",
+                                                    Name = "txtcode",
+                                                    Value = ""
+                                                    });
+
+                                                    listColumnLeft.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Website",
+                                                    Name = "txtWebsite",
+                                                    Value = ""
+                                                    });
+                                                    listColumnLeft.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Quy mô",
+                                                    Name = "txtCapacity",
+                                                    Value = ""
+                                                    });
+                                                    listColumnLeft.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Email",
+                                                    Name = "txtEmail",
+                                                    Value = ""
+                                                    });
+
+                                                  
+                                                }
+
+                                            
+                                                @foreach (var control in listColumnLeft)
+                                                    {
+
+                                                    Html.RenderPartial(control.PathControl, control);
+
+                                                    }
+
+                                            </div>
+
+                                        
+                                            <div class="col-lg-6 col-md-6 ">
+
+                                                 @{
+                                                    
+                                                    var listcolumnRight = new List<ControlItem>();
+                                                    
+ listcolumnRight.Add(new ImageControlItem()
+                            {
+                            Value = "",
+                            Lable = "Ảnh bìa công ty",
+                            Name = "coverBackgroudCompany",
+
+
+                            });
+                                                    listcolumnRight.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Tên công ty",
+                                                    Name = "txtCompnayName",
+                                                    Value = ""
+                                                    });
+
+                                                    listcolumnRight.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Lĩnh vực hoạt động",
+                                                    Name = "txtLinhVuc",
+                                                    Value = ""
+                                                    });
+                                                    listcolumnRight.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Địa chỉ",
+                                                    Name = "txtAddress",
+                                                    Value = ""
+                                                    });
+                                                    listcolumnRight.Add(new ControlItem()
+                                                    {
+                                                    Lable = "Số điện thoại",
+                                                    Name = "txtPhoneNumber",
+                                                    Value = ""
+                                                    });
+                                                }
+                                                @foreach (var control in listcolumnRight)
+                                                    {
+
+                                                    Html.RenderPartial(control.PathControl, control);
+
+                                                    }
+
+                                            </div>
+
+
+
+                                       </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12  ">
+
+                                                @{
+                                                    var shortContent = new ControlItem()
+                                                    {
+                                                        Lable = "Mô tả ",
+                                                        Name = "txtShortDescription",
+                                                        Type = 2,
+                                                        Value = ""
+                                                    };
+                                                    Html.RenderPartial(shortContent.PathControl, shortContent);
+                                                }
+                                            </div>
+
+
+                                            <br />
+
+                                            <div class="justify-content-center">
+                                                <button type="button" class="btn btn-primary">Cập nhật</button>
+                                            </div>
+
+                                        </div>
+
+
+                                        </div>
+                                        </div>
+                                      
+                                    </div>
+
+                                 </div>
+                                
+   
+                       </div>
+                   
+                   
+
+                    </div>
+                </div>
+              </div><!-- End Default Tabs -->
+
+            </div>
+          </div>
+
+</div>
+
+</section>
+
+<div class="modal fade" id="formModal" tabindex="-1">
+    <div class="modal-dialog  modal-dialog-centered modal-lg">
+        <div class="modal-content" id="contentModal">
+        </div>
+    </div>
+</div><!-- End Large Modal-->

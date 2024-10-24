@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\vietbank\\crm\\topmass\\washdata\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|c:\\vietbank\\crm\\topmass\\washdata\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|solutionrelative:dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|c:\\vietbank\\crm\\topmass\\washdata\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|solutionrelative:model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|c:\\vietbank\\crm\\topmass\\washdata\\callapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|solutionrelative:callapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|c:\\vietbank\\crm\\topmass\\washdata\\handlewashdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|solutionrelative:handlewashdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|c:\\vietbank\\crm\\topmass\\washdata\\importfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|solutionrelative:importfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|c:\\vietbank\\crm\\topmass\\washdata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{392AA17E-C15A-4836-8B44-89E9F9A6C1EF}|washdata.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\washdata\\DataAccess.cs",
+              "RelativeDocumentMoniker": "DataAccess.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\washdata\\DataAccess.cs",
+              "RelativeToolTip": "DataAccess.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwDwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T04:39:31.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CallApi.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\washdata\\CallApi.cs",
+              "RelativeDocumentMoniker": "CallApi.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\washdata\\CallApi.cs",
+              "RelativeToolTip": "CallApi.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA6wBAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T04:35:51.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HandleWashdata.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\washdata\\HandleWashdata.cs",
+              "RelativeDocumentMoniker": "HandleWashdata.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\washdata\\HandleWashdata.cs",
+              "RelativeToolTip": "HandleWashdata.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwBcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T02:43:06.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Model.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\washdata\\Model.cs",
+              "RelativeDocumentMoniker": "Model.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\washdata\\Model.cs",
+              "RelativeToolTip": "Model.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA4wAIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T05:16:16.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\washdata\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\washdata\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T09:17:16.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ImportFile.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\washdata\\ImportFile.cs",
+              "RelativeDocumentMoniker": "ImportFile.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\washdata\\ImportFile.cs",
+              "RelativeToolTip": "ImportFile.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAowDIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T06:49:52.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

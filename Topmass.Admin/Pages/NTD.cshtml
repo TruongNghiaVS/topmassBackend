@@ -43,16 +43,46 @@
                         </thead>
                         <tbody>
                            
+                            @{
+                                int i = 0;
+                            }
+                            @foreach (var itemData in Model.DataAll.Data)
+                            {
 
+                                var itemInfo = itemData as dynamic;
 
+                                var datetimeCreate = @itemInfo.CreateAt.ToString("dd/MM/yyyy HH:mm");
+                                var datetimeUpdate = "";
+                                if (@itemInfo.UpdateAt != null)
+                                {
+                                    datetimeUpdate = @itemInfo.UpdateAt.ToString("dd/MM/yyyy HH:mm");
+                                }
+                                i++;
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@itemInfo.Id</td>
+                                    <td>@itemInfo.Name</td>
+                                    <td>@itemInfo.Email</td>
+                                     <td>@itemInfo.CompanyName</td>
+                                    <td>@itemInfo.Taxcode</td>
+                                    <td>@itemInfo.Phone</td>
+                           
+                                    <td>@itemInfo.StatusText</td>
+                                    <td>@itemInfo.AuthenText</td>
+                                    
+                                    <td>@datetimeCreate</td>
+                                    <td>
+                                        <a href="/NTDDetail?Id=@itemInfo.Id" >
+                                            <i class="bi bi-pencil">
+                                            </i>
+                                        </a>
+                                    </td>
 
+                                </tr>
+                            }
                         </tbody>
                     </table>
-                   @*  @{
-                        Html.RenderPartial("formSearch/pagination", Model);
-                    } *@
-
-
+                  
                 </div>
             </div>
 

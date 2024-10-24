@@ -1068,6 +1068,7 @@ namespace Topmass.Job.Business
                 ProfessionText = jobDisplayItem.ProfessionText
 
             };
+
             var DataJob = new JobInfoDisplay()
             {
                 Content = jobDetail.Description,
@@ -1075,9 +1076,17 @@ namespace Topmass.Job.Business
                 Slug = jobInfo.Slug,
                 ExperienceText = jobDisplayItem.ExperienceText,
                 JobName = jobInfo.Name,
+                Requirement = jobDetail.Requirement,
+                Benefit = jobDetail.Benefit,
+                Description = jobDetail.Description,
+                Skill = jobDetail.Skill,
                 LocationText = jobDisplayItem.LocationText,
+                SalaryFrom = jobDetail.Salary_from.HasValue ? jobDetail.Salary_from.Value : 0,
+                SalaryTo = jobDetail.Salary_to.HasValue ? jobDetail.Salary_to.Value : 0,
+                CurrencyCode = jobDetail.Type_money,
                 RangeSalary = jobDisplayItem.RangeSalary,
-                CommonData = commonData
+                CommonData = commonData,
+                Expired_date = jobDetail.Expired_date
 
             };
 
@@ -1099,14 +1108,14 @@ namespace Topmass.Job.Business
             {
                 var allJobIdSave = await _jobInfoRepository.ExecuteSqlProcerduceToList<JobIdCount>
                 (
-                    "select DISTINCT JobId from jobSave where JobId = @jobId and   UserId = @UserId ",
+                    "select DISTINCT JobId from jobSave where JobId = @jobId and   UserId = @UserId and Deleted = 0  ",
                     new { request.UserId, jobId = jobInfo.Id },
                     commandType: CommandType.Text
                 );
 
                 var allJobApply = await _jobInfoRepository.ExecuteSqlProcerduceToList<JobIdCount>
                  (
-                     "select DISTINCT  JobId  from jobApply  where  JobId = @jobId  and   CreatedBy = @userId ",
+                     "select DISTINCT  JobId  from jobApply  where  JobId = @jobId  and   CreatedBy = @userId and Deleted = 0 ",
                       new { request.UserId, jobId = jobInfo.Id },
                      commandType: CommandType.Text
                  );

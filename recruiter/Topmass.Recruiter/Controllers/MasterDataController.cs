@@ -25,11 +25,9 @@ namespace Topmass.Recruiter.Controllers
         [AllowAnonymous]
         public async Task<ActionResult> InfoRealms()
         {
-            var result = await _articleBusiness.FillterData((int)MasterDataType.Realm);
+            var result = await _articleBusiness.FillterData((int)MasterDataType.Career);
             return StatusCode(result.StatusCode, result);
         }
-
-
 
         [HttpGet]
         [AllowAnonymous]
@@ -62,7 +60,6 @@ namespace Topmass.Recruiter.Controllers
             var result = await _articleBusiness.FillterData((int)MasterDataType.Experience);
             return StatusCode(result.StatusCode, result);
         }
-
 
         [HttpGet]
         [AllowAnonymous]

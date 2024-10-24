@@ -222,15 +222,15 @@ function  getAllGroup (){
         });
 }
 
-function UploadImage(fileInput, type ="candidate") {
+function UploadImage(fileInput, typeDisplay ="notavatar") {
 
+  
  
     if (fileInput.files.length < 1)
         return;
     var fileAccess = fileInput.files[0];
     var formData = new FormData();
-    formData.append('FileRequest', fileAccess);
-    formData.append('Type', "candidate");
+    formData.append('File', fileAccess);
     $.ajax({
         headers: {
             "RequestVerificationToken":
@@ -239,11 +239,12 @@ function UploadImage(fileInput, type ="candidate") {
         type: "POST",
         processData: false,  // tell jQuery not to process the data
         contentType: false,
-        url: '/file?handler=Upload',
+        url: '//localhost:7214/media/UploadAvatar',
         data: formData ,
         success: function (data, reponse) {
+            
 
-            successUpload(data, fileInput);
+            successUpload(data, fileInput, true, typeDisplay);
         },
         error: function (jqXHR, exception) {
             showError(jqXHR);
@@ -255,24 +256,35 @@ function UploadImage(fileInput, type ="candidate") {
 
 }
 
-function successUpload(dataReponse, fileInput) {
+function successUpload(dataReponse, fileInput, displayImage =true,typeDisplay = "notavatar" ) {
 
- 
-    var linkResult = dataReponse.linkResult;
+    var resultUpload = dataReponse.data;
+    var linkResult = resultUpload.fullLink;
     var x = fileInput.closest(".form-group");
     var fileResult1 = x.querySelector('.fileResult');
     fileResult1.innerHTML = "";
+    if( displayImage ==false)
+    {
+        var taga = document.createElement('a');
+        taga.href = linkResult;
+    
+        taga.target = "_blank";
+        taga.textContent = "Link file";
+        fileResult1.appendChild(taga);
+    }
+    else 
+    {
+        let img = document.createElement('img');
+        if( typeDisplay =="avatar")
+        {
+            img.classList.add("avatarClass");
+        }
+        img.src =linkResult;
+        fileResult1.appendChild(img);
 
-    var taga = document.createElement('a');
-    taga.href = linkResult;
-    taga.target = "_blank";
-    taga.textContent = "Link file";
-    fileResult1.appendChild(taga);
-
+    }
     var fileValue = x.querySelector(".valuefile");
     fileValue.value = linkResult;
-
-
 }
 
 
@@ -1189,3 +1201,61 @@ function changeStatusQuick(cbbook){
         return datetimeConvert;
 
     }
+ 
+    const useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.addEventListener("DOMContentLoaded", function(event) {
+        iniTinymce();
+    });
+  
+
+
+function iniTinymce ()
+{
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons accordion',
+        editimage_cors_hosts: ['picsum.photos'],
+        menubar: 'file edit view insert format tools table help',
+        toolbar: "undo redo | accordion accordionremove | blocks fontfamily fontsize | bold italic underline strikethrough | align numlist bullist | link image | table media | lineheight outdent indent| forecolor backcolor removeformat | charmap emoticons | code fullscreen preview | save print | pagebreak anchor codesample | ltr rtl",
+        autosave_ask_before_unload: true,
+        autosave_interval: '30s',
+        autosave_prefix: '{path}{query}-{id}-',
+        autosave_restore_when_empty: false,
+        autosave_retention: '2m',
+        image_advtab: true,
+        importcss_append: true,
+        file_picker_callback: (callback, value, meta) => {
+          /* Provide file and text for the link dialog */
+          if (meta.filetype === 'file') {
+            callback('https://www.google.com/logos/google.jpg', {
+              text: 'My text'
+            });
+          }
+      
+          /* Provide image and alt text for the image dialog */
+          if (meta.filetype === 'image') {
+            callback('https://www.google.com/logos/google.jpg', {
+              alt: 'My alt text'
+            });
+          }
+      
+          /* Provide alternative source and posted for the media dialog */
+          if (meta.filetype === 'media') {
+            callback('movie.mp4', {
+              source2: 'alt.ogg',
+              poster: 'https://www.google.com/logos/google.jpg'
+            });
+          }
+        },
+        height: 600,
+        image_caption: true,
+        quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+        noneditable_class: 'mceNonEditable',
+        toolbar_mode: 'sliding',
+        contextmenu: 'link image table',
+        skin: useDarkMode ? 'oxide-dark' : 'oxide',
+        content_css: useDarkMode ? 'dark' : 'default',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+      });
+
+}

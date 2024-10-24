@@ -80,7 +80,10 @@
 
         public string? CvKey { get; set; }
 
-        public int Gender { get; set; }
+        public int? Gender { get; set; }
+        public int? FromYear { get; set; }
+
+        public int? ToYear { get; set; }
 
         public DateTime? DayOfBirth { get; set; }
 
@@ -97,5 +100,19 @@
             Page = 1;
         }
 
+    }
+
+    public class HistoryRequest
+    {
+
+        public DateTime? From { get; set; }
+
+        public DateTime? To { get; set; }
+
+        public HistoryRequest()
+        {
+            From = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
+            To = From.Value.AddDays(1).AddSeconds(-1);
+        }
     }
 }

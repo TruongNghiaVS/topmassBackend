@@ -65,9 +65,7 @@
 
         public string JobSlug { get; set; }
 
-        public int SalaryFrom { get; set; }
 
-        public int SalaryTo { get; set; }
 
         public int Id { get; set; }
 
@@ -93,6 +91,10 @@
                 return TypeMoney.Value == 0 ? "0" : "1";
             }
         }
+
+        public int SalaryFrom { get; set; }
+
+        public int SalaryTo { get; set; }
         public bool? Aggrement { get; set; }
         public BaseItemProductDisplay()
         {

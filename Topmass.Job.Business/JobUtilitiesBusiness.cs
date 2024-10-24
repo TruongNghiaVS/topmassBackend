@@ -72,7 +72,7 @@ namespace Topmass.Job.Business
                 UpdatedBy = userId
             };
 
-            var jobitemexit = await _jobsaveRepository.FindOneByStatementSql<JobsaveModel>("select * from jobSave  where JobId = @jobId  and UserId= @userId ", new
+            var jobitemexit = await _jobsaveRepository.FindOneByStatementSql<JobsaveModel>("select * from jobSave  where JobId = @jobId  and UserId= @userId and   ISNULL(Deleted,0) =0 ", new
             {
                 JobId = jobInfo.Id,
                 userId
@@ -91,10 +91,15 @@ namespace Topmass.Job.Business
         }
 
 
-        public async Task<bool> RemoveJobSave(int id)
+        public async Task<bool> RemoveJobSave(int id, int userId)
         {
 
-            var jobitemexit = await _jobsaveRepository.GetById(id);
+            var jobitemexit = await _jobsaveRepository.FindOneByStatementSql<JobsaveModel>("select * from jobSave where JobId = @jobId and UserId = @userId and  Deleted = 0 ",
+                 new
+                 {
+                     jobId = id,
+                     userId = userId
+                 });
             if (jobitemexit == null)
             {
                 return true;

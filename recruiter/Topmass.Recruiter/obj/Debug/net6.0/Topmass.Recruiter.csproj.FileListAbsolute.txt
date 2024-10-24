@@ -1,3 +1,11 @@
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.csproj.AssemblyReference.cache
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.GeneratedMSBuildEditorConfig.editorconfig
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.AssemblyInfoInputs.cache
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.AssemblyInfo.cs
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.csproj.CoreCompileInputs.cache
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.MvcApplicationPartsAssemblyInfo.cs
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.MvcApplicationPartsAssemblyInfo.cache
+C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.sourcelink.json
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\bin\Debug\net6.0\appsettings.Development.json
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\bin\Debug\net6.0\appsettings.json
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\bin\Debug\net6.0\Topmass.Recruiter.exe
@@ -73,14 +81,6 @@ C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\bin\Debug\net6.0\Topmass.Mai
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\bin\Debug\net6.0\Topmass.Notification.Repository.pdb
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\bin\Debug\net6.0\Topmass.Recruiter.Repository.pdb
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\bin\Debug\net6.0\Topmass.Web.Repository.pdb
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.csproj.AssemblyReference.cache
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.GeneratedMSBuildEditorConfig.editorconfig
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.AssemblyInfoInputs.cache
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.AssemblyInfo.cs
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.csproj.CoreCompileInputs.cache
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.MvcApplicationPartsAssemblyInfo.cs
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.MvcApplicationPartsAssemblyInfo.cache
-C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\Topmass.Recruiter.sourcelink.json
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\staticwebassets.build.json
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\staticwebassets.development.json
 C:\vietbank\crm\topmass\recruiter\Topmass.Recruiter\obj\Debug\net6.0\staticwebassets\msbuild.Topmass.Recruiter.Microsoft.AspNetCore.StaticWebAssets.props

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Topmass.Core.ServiceMail")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4741142076a4affc341e7c7c2698763f3f092d3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f13e1b3334af167cb007c6b6d67fbf2e5546c4bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Topmass.Core.ServiceMail")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Topmass.Core.ServiceMail")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

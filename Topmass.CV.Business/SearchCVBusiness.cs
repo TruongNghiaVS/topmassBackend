@@ -67,7 +67,7 @@ namespace Topmass.CV.Business
                 return true;
             }
 
-            var createCV = await searchCVResultRepository.ExecuteSQL("sp_applyJobWithSearchCVv2", new
+            var createCV = await searchCVResultRepository.ExecuteStatementSql("sp_applyJobWithSearchCVv2", new
             {
                 TypeData = 3,
                 TemplateID = 1,
