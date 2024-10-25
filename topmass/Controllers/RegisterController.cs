@@ -17,9 +17,6 @@ namespace topmass.Controllers
             IAuthenBuisiness authenBuisiness) : base(logger)
         {
             _logger = logger;
-
-
-
             _candidateBusiness = candidateBusiness;
             _authenBuisiness = authenBuisiness;
         }
@@ -60,32 +57,6 @@ namespace topmass.Controllers
             var result = await _candidateBusiness.RegisterUser(request);
             return StatusCode(result.StatusCode, result);
         }
-
-
-        //[HttpPost]
-        //public async Task<ActionResult> LoginUser(AuthenRequest request)
-        //{
-        //    //var resultUser = await GetCurrentUser();
-        //    var dataError = new ErrorData() { };
-        //    if (string.IsNullOrEmpty(request.UserName))
-        //    {
-        //        dataError.AddError(nameof(request.UserName), "Thiếu thông tin tên đăng nhập");
-        //    }
-        //    if (string.IsNullOrEmpty(request.Password))
-        //    {
-        //        dataError.AddError(nameof(request.Password), "Thiếu thông tin mật khẩu");
-        //    }
-
-        //    if (dataError.HasErorr())
-        //    {
-        //        return StatusCode(303, dataError);
-        //    }
-        //    var result = await _authenBuisiness.LoginCandidate(request.UserName, request.Password);
-        //    return StatusCode(result.StatusCode, result);
-        //}
-
-
-
 
     }
 }

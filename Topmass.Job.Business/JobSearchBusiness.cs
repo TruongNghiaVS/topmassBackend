@@ -192,7 +192,10 @@ namespace Topmass.Job.Business
                 .ExecuteSqlProcerduceToList<BestJobOptimizationDisplayItemData>("sp_job_getSuitableJob",
                 new
                 {
-                    request.LocationSearch
+                    request.LocationSearch,
+                    request.Limit,
+                    request.Page
+
                 });
             if (request.UserId > 0)
             {
@@ -226,6 +229,15 @@ namespace Topmass.Job.Business
             {
                 reponse.Data = dataJOb;
             }
+
+            reponse.Limit = request.Limit;
+            reponse.Page = request.Page;
+            var itemfirst = dataJOb.FirstOrDefault();
+            if (itemfirst != null)
+            {
+                reponse.TotalRecord = itemfirst.TotalRecord;
+            }
+
             return reponse;
         }
 
@@ -290,7 +302,9 @@ namespace Topmass.Job.Business
                 .ExecuteSqlProcerduceToList<BestJobOptimizationDisplayItemData>("sp_job_getGetAttractiveJobs",
                 new
                 {
-                    request.LocationSearch
+                    request.LocationSearch,
+                    request.Limit,
+                    request.Page
 
                 });
 
@@ -325,6 +339,14 @@ namespace Topmass.Job.Business
             else
             {
                 reponse.Data = dataJOb;
+            }
+
+            reponse.Limit = request.Limit;
+            reponse.Page = request.Page;
+            var itemfirst = dataJOb.FirstOrDefault();
+            if (itemfirst != null)
+            {
+                reponse.TotalRecord = itemfirst.TotalRecord;
             }
             return reponse;
         }

@@ -218,6 +218,7 @@ namespace topmass.Model
                 UserId = resultUser.UserId,
                 AvatarLink = requestAdd.AvatarLink,
                 AddressInfo = requestAdd.AddressInfo,
+                DateOfBirth = requestAdd.DateOfBirth,
                 FullName = requestAdd.FullName,
                 Gender = requestAdd.Gender,
                 Introduction = requestAdd.Introduction,

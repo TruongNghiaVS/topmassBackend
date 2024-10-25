@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{AF716791-17D6-48F4-B8E5-B74AB32A80C4}|ConsoleApp2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF716791-17D6-48F4-B8E5-B74AB32A80C4}|ConsoleApp2.csproj|c:\\vietbank\\crm\\topmass\\consoleapp2\\pdfedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF716791-17D6-48F4-B8E5-B74AB32A80C4}|ConsoleApp2.csproj|solutionrelative:pdfedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AF716791-17D6-48F4-B8E5-B74AB32A80C4}|ConsoleApp2.csproj|c:\\vietbank\\crm\\topmass\\consoleapp2\\importfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF716791-17D6-48F4-B8E5-B74AB32A80C4}|ConsoleApp2.csproj|solutionrelative:importfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,20 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PDFEdit.cs",
-              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\ConsoleApp2\\PDFEdit.cs",
-              "RelativeDocumentMoniker": "PDFEdit.cs",
-              "ToolTip": "C:\\vietbank\\crm\\topmass\\ConsoleApp2\\PDFEdit.cs",
-              "RelativeToolTip": "PDFEdit.cs",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAYwC4AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T10:02:39.587Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,14 +28,27 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\vietbank\\crm\\topmass\\ConsoleApp2\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T09:56:18.193Z",
+              "WhenOpened": "2024-10-24T08:42:07.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ImportFile.cs",
+              "DocumentMoniker": "C:\\vietbank\\crm\\topmass\\ConsoleApp2\\ImportFile.cs",
+              "RelativeDocumentMoniker": "ImportFile.cs",
+              "ToolTip": "C:\\vietbank\\crm\\topmass\\ConsoleApp2\\ImportFile.cs",
+              "RelativeToolTip": "ImportFile.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAQwEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:59:32.584Z",
+              "EditorCaption": ""
             }
           ]
         }

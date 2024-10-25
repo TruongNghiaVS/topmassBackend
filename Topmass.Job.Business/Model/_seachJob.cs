@@ -19,14 +19,25 @@
 
     }
 
-    public class GetSuitableJobRequest
+    public interface IBaseSearch
+    {
+
+        public int? Limit { get; set; }
+        public int? Page { get; set; }
+    }
+    public class GetSuitableJobRequest : IBaseSearch
     {
         public string LocationSearch { get; set; }
 
         public int UserId { get; set; }
+
+        public int? Limit { get; set; }
+        public int? Page { get; set; }
         public GetSuitableJobRequest()
         {
             UserId = 0;
+            Limit = 1;
+            Page = 9;
         }
     }
 
@@ -64,10 +75,16 @@
             UserId = -1;
         }
     }
+    public class BaseReponse
+    {
+        public int TotalRecord { get; set; }
 
+        public int? Page { get; set; }
 
+        public int? Limit { get; set; }
 
-    public class GetAllBestJobOptimizationReponse
+    }
+    public class GetAllBestJobOptimizationReponse : BaseReponse
     {
 
         public List<BestJobOptimizationDisplayItemData> Data { get; set; }

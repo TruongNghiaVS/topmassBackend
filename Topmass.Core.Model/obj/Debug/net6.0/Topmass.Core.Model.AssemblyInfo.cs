@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Topmass.Core.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f13e1b3334af167cb007c6b6d67fbf2e5546c4bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2e7c6c1a1e0416d8637e09193a039162a52d2d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Topmass.Core.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Topmass.Core.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

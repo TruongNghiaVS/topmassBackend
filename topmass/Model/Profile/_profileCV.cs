@@ -24,6 +24,8 @@
 
         public string? AddressInfo { get; set; }
 
+        public DateTime? DateOfBirth { get; set; }
+
 
 
 

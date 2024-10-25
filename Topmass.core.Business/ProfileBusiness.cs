@@ -552,6 +552,7 @@ namespace Topmass.core.Business
             profileUser.Email = request.Email;
             profileUser.AddressInfo = request.AddressInfo;
             profileUser.Introduction = request.Introduction;
+            profileUser.DateOfBirth = request.DateOfBirth;
             return await _profileCVUserRepository.AddOrUPdate(profileUser);
         }
 

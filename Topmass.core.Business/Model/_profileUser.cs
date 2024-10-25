@@ -25,6 +25,8 @@
 
         public int UserId { get; set; }
 
+        public DateTime? DateOfBirth { get; set; }
+
 
 
 

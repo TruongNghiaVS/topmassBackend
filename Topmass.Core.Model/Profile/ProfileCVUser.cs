@@ -16,6 +16,8 @@
 
         public string Introduction { get; set; }
 
+        public DateTime? DateOfBirth { get; set; }
+
 
         public string? AvatarLink { get; set; }
 

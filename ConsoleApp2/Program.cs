@@ -4,12 +4,25 @@
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello, World!");
-
-            string sourceFile = @"C:\Users\Admin\Downloads\file.pdf";
-            string descFile = @"C:\Users\Admin\Downloads\original_with_text_replaced.pdf";
-            PDFEdit pdfObj = new PDFEdit();
-            pdfObj.ReplaceTextInPDF(sourceFile, descFile, "Vietnam", "xxxx");
+            var importfile = new ImportFile();
+            importfile.ImportCase();
+            var filePdf = new FilePdf();
+            var indeError = 0;
+            foreach (var item in importfile.Data)
+            {
+                var contentCV = filePdf.ReadFilePdf(item.CVLink);
+                if (contentCV == "notfile")
+                {
+                    contentCV = filePdf.ReadFilePdf(item.CVLink2);
+                }
+                if (contentCV == "notfile")
+                {
+                    contentCV = "notfile";
+                    indeError++;
+                }
+                item.ContentCV = contentCV;
+            }
+            importfile.WritedFile();
         }
     }
 }

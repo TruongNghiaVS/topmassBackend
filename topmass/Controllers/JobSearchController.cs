@@ -79,6 +79,8 @@ namespace topmass.Model
             var requestSearch = new GetAttractiveJobs()
             {
                 LocationSearch = locationSearch,
+                Limit = request.Limit,
+                Page = request.Page,
                 UserId = userId
             };
             var result = await _business.GetAttractiveJobs(requestSearch);
@@ -97,14 +99,14 @@ namespace topmass.Model
             {
                 var resultUser = await GetCurrentUser();
                 userId = resultUser.UserId;
-
             }
             var locationSearch = "";
             var requestSearch = new GetSuitableJobRequest()
             {
                 LocationSearch = locationSearch,
+                Limit = request.Limit,
+                Page = request.Page,
                 UserId = userId
-
             };
             var result = await _business.GetSuitableJob(requestSearch);
             reponse.Data = result;

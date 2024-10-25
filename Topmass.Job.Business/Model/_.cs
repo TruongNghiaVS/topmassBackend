@@ -9,6 +9,7 @@ namespace Topmass.Job.Business.Model
     public class BestJobOptimizationDisplayItemData : BaseItemProductDisplay
     {
         public string RangeSalary { get; set; }
+        public int TotalRecord { get; set; }
 
         //IT, Marketting
         public BestJobOptimizationDisplayItemData() : base()

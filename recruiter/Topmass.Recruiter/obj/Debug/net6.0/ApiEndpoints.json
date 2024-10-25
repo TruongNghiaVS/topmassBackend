@@ -380,9 +380,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Topmass.Recruiter.Model.InputExchangeSearchRequest",
-        "IsRequired": true
+        "Name": "Status",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
